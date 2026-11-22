@@ -39,10 +39,11 @@ Basis Desain: Stitch Export (`REDESIGN/` - Cartographic Atlas)
     - [x] Alternating graphic scale bar 1:50.000 di pojok kanan bawah
     - [x] Panel Statistik: 4 blok metrik kunci, diagram batang luas, tabel tabular, validasi box
     - [x] Panel Sensitivitas: callout box metode OAT dengan 2 blok figur tegas (bobot vs batas kelas)
-  - [ ] **2d: Sumber, Lisensi & Unduhan + Metodologi**
-    - [ ] Format tabel untuk lisensi data dan atribusi
-    - [ ] Kartu unduhan dengan metadata ukuran dan format
-    - [ ] Metodologi: 8 keterbatasan model sebagai accordion rapi
+  - [x] **2d: Sumber, Lisensi & Unduhan + Metodologi**
+    - [x] Metodologi: 8 keterbatasan model diubah menjadi format accordion rapi (isi teks tidak diubah)
+    - [x] Sumber & Lisensi: pernyataan hak cipta dataset asal diubah menjadi format tabel terstruktur
+    - [x] Bagian Unduhan: callout peringatan hukum batasan (bukan PKKPR/RTRW)
+    - [x] Kartu unduhan data GIS dan peta PDF dengan metadata ukuran dan format
   - [ ] **2e: Uji Responsif (390px, 768px, 1440px)**
     - [ ] Penyesuaian panel mengambang jadi bottom sheet pada mobile
     - [ ] Grid tabel scrollable horizontal di layar sempit
