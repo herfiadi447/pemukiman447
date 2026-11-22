@@ -282,13 +282,13 @@ async function setupInitialData() {
       paint: {
         'fill-color': [
           'match', ['get', 'kode_kelas'],
-          1, '#19734b',
-          2, '#8ebf71',
-          3, '#f4d16f',
+          1, '#1B6B4A',
+          2, '#8CC084',
+          3, '#F2C95C',
           4, '#e38c53',
-          5, '#b74643',
-          6, '#bebebe',
-          '#bebebe'
+          5, '#B8574E',
+          6, '#C9C9C4',
+          '#C9C9C4'
         ],
         'fill-opacity': 0.82
       }
@@ -1006,13 +1006,13 @@ function initMapCompare() {
       paint: {
         'fill-color': [
           'match', ['get', 'kode_kelas'],
-          1, '#19734b',
-          2, '#8ebf71',
-          3, '#f4d16f',
+          1, '#1B6B4A',
+          2, '#8CC084',
+          3, '#F2C95C',
           4, '#e38c53',
-          5, '#b74643',
-          6, '#bebebe',
-          '#bebebe'
+          5, '#B8574E',
+          6, '#C9C9C4',
+          '#C9C9C4'
         ],
         'fill-opacity': 0.85
       }
