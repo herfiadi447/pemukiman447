@@ -26,19 +26,16 @@
 </head>
 <body>
 
-  <!-- Top Warning Disclaimer Banner -->
-  <div class="disclaimer-top" role="alert">
-    ⚠️ PENYARINGAN AWAL, BUKAN PENETAPAN RESMI / RTRW, TANPA VALIDASI LAPANGAN
-  </div>
-
-  <!-- Header Navigation -->
+  <!-- Header Navigation (Institutional Cartographic Atlas) -->
   <header>
     <div class="nav-container">
       <a href="#hero" class="brand-wrapper">
-        <div class="brand-icon">GIS</div>
+        <div class="brand-icon">
+          <span class="material-symbols-outlined" style="font-size:20px;">account_balance</span>
+        </div>
         <div class="brand-text">
-          <h1>Kesesuaian Lahan Luwu v2</h1>
-          <p>Kabupaten Luwu, Sulawesi Selatan</p>
+          <h1>KESESUAIAN LAHAN LUWU</h1>
+          <p>SISTEM INFORMASI GEOGRAFIS KESESUAIAN LAHAN PERMUKIMAN KAB. LUWU</p>
         </div>
       </a>
 
@@ -46,17 +43,34 @@
         ☰
       </button>
 
-      <nav>
+      <nav id="main-nav">
         <ul>
-          <li><a href="#hero">Beranda</a></li>
+          <li><a href="#hero" class="active">Beranda</a></li>
           <li><a href="#peta">Peta Interaktif</a></li>
           <li><a href="#statistik">Statistik</a></li>
           <li><a href="#sensitivitas">Sensitivitas</a></li>
           <li><a href="#metode">Metodologi</a></li>
-          <li><a href="#sumber">Sumber & Lisensi</a></li>
+          <li><a href="#sumber">Sumber &amp; Lisensi</a></li>
           <li><a href="#unduhan">Unduhan Data</a></li>
         </ul>
       </nav>
+
+      <div class="nav-extra-coords">
+        <span>WGS 84 / UTM ZONE 51S</span>
+      </div>
+    </div>
+
+    <!-- Sub-header Technical Strip -->
+    <div class="header-technical-strip">
+      <div class="strip-left">
+        <span class="material-symbols-outlined strip-icon">info</span>
+        <span>Peringatan Teknis: Penyaringan awal, bukan penetapan resmi RTRW. Digunakan untuk analisis kesesuaian biofisik makro skala 1:50.000.</span>
+      </div>
+      <div class="strip-right">
+        <span>LEMBAR ATLAS NO. 2112-LW</span>
+        <span>•</span>
+        <span>SKALA 1:50.000</span>
+      </div>
     </div>
   </header>
 

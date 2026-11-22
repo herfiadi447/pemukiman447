@@ -65,16 +65,16 @@ body {
 /* ============ HEADER & NAV ============ */
 header {
   background: var(--paper);
-  border-bottom: 2px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
 .nav-container {
-  max-width: 1320px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 10px 20px;
+  padding: 10px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -90,56 +90,100 @@ header {
 }
 
 .brand-icon {
-  width: 40px;
-  height: 40px;
-  background: var(--accent);
-  border: 2px solid var(--accent);
+  width: 38px;
+  height: 38px;
+  background: var(--canvas);
+  border: 1px solid var(--accent);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--paper);
-  font-weight: 700;
-  font-size: 1rem;
-  font-family: var(--font-mono);
+  color: var(--accent);
   border-radius: 0;
 }
 
 .brand-text h1 {
   font-family: var(--font-serif);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--ink-primary);
-  line-height: 1.2;
+  line-height: 1.15;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .brand-text p {
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   color: var(--ink-muted);
   font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-top: 2px;
 }
 
 nav ul {
   display: flex;
   list-style: none;
-  gap: 2px;
+  gap: 6px;
 }
 
 nav a {
   text-decoration: none;
   color: var(--ink-muted);
   font-weight: 500;
-  font-size: 0.825rem;
-  padding: 7px 12px;
-  border: 1px solid transparent;
-  transition: color 0.15s, border-color 0.15s, background 0.15s;
+  font-size: 0.835rem;
+  padding: 8px 12px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
   border-radius: 0;
   letter-spacing: 0.02em;
 }
 
-nav a:hover, nav a:focus-visible {
+nav a:hover, nav a.active {
   color: var(--accent);
-  background: var(--accent-bg);
-  border-color: var(--hairline);
+  border-bottom: 2px solid var(--accent);
+  font-weight: 600;
+}
+
+.nav-extra-coords {
+  display: flex;
+  align-items: center;
+  border-left: 1px solid var(--hairline);
+  padding-left: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.header-technical-strip {
+  background: var(--parchment);
+  border-top: 1px solid var(--hairline);
+  padding: 5px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.72rem;
+  color: var(--ink-body);
+  font-family: var(--font-mono);
+}
+
+.header-technical-strip .strip-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.header-technical-strip .strip-icon {
+  font-size: 14px;
+  color: #7D8C43;
+}
+
+.header-technical-strip .strip-right {
+  display: flex;
+  gap: 10px;
+  color: var(--ink-muted);
+  font-size: 0.68rem;
 }
 
 .btn-mobile-menu {
@@ -266,30 +310,51 @@ section {
 }
 
 .section-container {
-  max-width: 1320px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
 .section-header {
-  margin-bottom: 32px;
-  padding-bottom: 16px;
-  border-bottom: 2px solid var(--hairline);
+  position: relative;
+  background: var(--paper);
+  border: 1px solid var(--hairline);
+  padding: 22px 28px;
+  margin-bottom: 28px;
+}
+
+.section-header::before {
+  content: "+";
+  position: absolute;
+  top: 4px;
+  left: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--grid-line);
+}
+
+.section-header::after {
+  content: "+";
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--grid-line);
 }
 
 .section-header h2 {
   font-family: var(--font-serif);
-  font-size: 1.75rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: var(--ink-primary);
-  letter-spacing: 0.01em;
-  margin-bottom: 8px;
-  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
 }
 
 .section-header p {
   color: var(--ink-muted);
-  font-size: 0.95rem;
-  max-width: 800px;
+  font-size: 0.92rem;
+  line-height: 1.5;
 }
 
 /* ============ MAP TOOLBAR ============ */
