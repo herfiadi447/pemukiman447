@@ -14,12 +14,12 @@ let sensitivityChart = null;
 
 // Official validation numbers from README & Prompt
 const OFFICIAL_TOTALS = {
-  1: { nama: 'S1 sangat sesuai', luas: 20339.48, color: '#19734b' },
-  2: { nama: 'S2 sesuai', luas: 83229.09, color: '#8ebf71' },
-  3: { nama: 'S3 sesuai bersyarat', luas: 67849.63, color: '#f4d16f' },
+  1: { nama: 'S1 sangat sesuai', luas: 20339.48, color: '#1B6B4A' },
+  2: { nama: 'S2 sesuai', luas: 83229.09, color: '#8CC084' },
+  3: { nama: 'S3 sesuai bersyarat', luas: 67849.63, color: '#F2C95C' },
   4: { nama: 'N tidak sesuai', luas: 0.00, color: '#e38c53' },
-  5: { nama: 'Kendala', luas: 90610.55, color: '#b74643' },
-  6: { nama: 'Tidak dinilai', luas: 27813.81, color: '#bebebe' },
+  5: { nama: 'Kendala', luas: 90610.55, color: '#B8574E' },
+  6: { nama: 'Tidak dinilai', luas: 27813.81, color: '#C9C9C4' },
   total: 289842.58
 };
 
@@ -114,12 +114,12 @@ function updateStatisticsPanel(kecName) {
 
   // Aggregate by kode_kelas
   const classSummary = {
-    1: { nama: 'S1 sangat sesuai', luas: 0, persenKec: 0, persenDinilai: 0, color: '#19734b' },
-    2: { nama: 'S2 sesuai', luas: 0, persenKec: 0, persenDinilai: 0, color: '#8ebf71' },
-    3: { nama: 'S3 sesuai bersyarat', luas: 0, persenKec: 0, persenDinilai: 0, color: '#f4d16f' },
+    1: { nama: 'S1 sangat sesuai', luas: 0, persenKec: 0, persenDinilai: 0, color: '#1B6B4A' },
+    2: { nama: 'S2 sesuai', luas: 0, persenKec: 0, persenDinilai: 0, color: '#8CC084' },
+    3: { nama: 'S3 sesuai bersyarat', luas: 0, persenKec: 0, persenDinilai: 0, color: '#F2C95C' },
     4: { nama: 'N tidak sesuai', luas: 0, persenKec: 0, persenDinilai: 0, color: '#e38c53' },
-    5: { nama: 'Kendala', luas: 0, persenKec: 0, persenDinilai: 0, color: '#b74643' },
-    6: { nama: 'Tidak dinilai', luas: 0, persenKec: 0, persenDinilai: 0, color: '#bebebe' }
+    5: { nama: 'Kendala', luas: 0, persenKec: 0, persenDinilai: 0, color: '#B8574E' },
+    6: { nama: 'Tidak dinilai', luas: 0, persenKec: 0, persenDinilai: 0, color: '#C9C9C4' }
   };
 
   let totalLuasKec = 0;
@@ -232,7 +232,7 @@ function renderSuitabilityChart(classSummary) {
     classSummary[5].luas,
     classSummary[6].luas
   ];
-  const bgColors = ['#19734b', '#8ebf71', '#f4d16f', '#e38c53', '#b74643', '#bebebe'];
+  const bgColors = ['#1B6B4A', '#8CC084', '#F2C95C', '#e38c53', '#B8574E', '#C9C9C4'];
 
   if (suitabilityChart) {
     suitabilityChart.data.datasets[0].data = values;

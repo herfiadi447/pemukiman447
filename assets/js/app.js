@@ -31,6 +31,16 @@ document.addEventListener('DOMContentLoaded', () => {
  * Setup map layer controls (checkboxes, opacity sliders, toggles)
  */
 function setupLayerControls() {
+  // --- Basemap Selection ---
+  const basemapRadios = document.querySelectorAll('input[name="basemap-select"]');
+  basemapRadios.forEach(radio => {
+    radio.addEventListener('change', (e) => {
+      if (e.target.checked && window.setBasemap) {
+        window.setBasemap(e.target.value);
+      }
+    });
+  });
+
   // --- Kesesuaian Lahan ---
   const chkKesesuaian = document.getElementById('chk-layer-kesesuaian');
   const sliderKesesuaian = document.getElementById('slider-opacity-kesesuaian');
@@ -264,6 +274,52 @@ function setupUIInteractions() {
       const isCollapsed = panelBody.style.display === 'none';
       panelBody.style.display = isCollapsed ? 'flex' : 'none';
       btnTogglePanel.textContent = isCollapsed ? '−' : '+';
+    });
+  }
+
+  // Floating map left panel collapse toggle
+  const btnToggleLeftPanel = document.getElementById('btn-toggle-left-panel');
+  const leftPanelBody = document.getElementById('map-left-panel-body');
+  if (btnToggleLeftPanel && leftPanelBody) {
+    btnToggleLeftPanel.addEventListener('click', () => {
+      const isCollapsed = leftPanelBody.style.display === 'none';
+      leftPanelBody.style.display = isCollapsed ? 'flex' : 'none';
+      btnToggleLeftPanel.textContent = isCollapsed ? '−' : '+';
+    });
+  }
+
+  // Floating map right panel tab switching
+  const tabBtns = document.querySelectorAll('.panel-tab-btn');
+  const tabContents = document.querySelectorAll('.panel-tab-content');
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabBtns.forEach(b => b.classList.remove('active'));
+      tabContents.forEach(c => {
+        c.classList.remove('active');
+        c.style.display = 'none';
+      });
+      btn.classList.add('active');
+      const targetId = btn.getAttribute('data-tab');
+      const target = document.getElementById(targetId);
+      if (target) {
+        target.classList.add('active');
+        target.style.display = 'block';
+      }
+    });
+  });
+
+  // Basemap button toggle for click / touch
+  const btnBasemap = document.getElementById('btn-toggle-basemap');
+  const boxBasemap = document.getElementById('basemap-control-box');
+  if (btnBasemap && boxBasemap) {
+    btnBasemap.addEventListener('click', (e) => {
+      e.stopPropagation();
+      boxBasemap.classList.toggle('active');
+    });
+    document.addEventListener('click', (e) => {
+      if (!boxBasemap.contains(e.target)) {
+        boxBasemap.classList.remove('active');
+      }
     });
   }
 }

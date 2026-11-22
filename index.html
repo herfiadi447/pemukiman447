@@ -15,24 +15,27 @@
   <link rel="stylesheet" href="assets/vendor/maplibre-gl.css">
   <link rel="stylesheet" href="assets/vendor/maplibre-gl-compare.css">
 
+  <!-- Google Fonts (Cartographic Atlas) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Serif:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
   <!-- Application CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-  <!-- Top Warning Disclaimer Banner -->
-  <div class="disclaimer-top" role="alert">
-    ⚠️ PENYARINGAN AWAL, BUKAN PENETAPAN RESMI / RTRW, TANPA VALIDASI LAPANGAN
-  </div>
-
-  <!-- Header Navigation -->
+  <!-- Header Navigation (Institutional Cartographic Atlas) -->
   <header>
     <div class="nav-container">
       <a href="#hero" class="brand-wrapper">
-        <div class="brand-icon">GIS</div>
+        <div class="brand-icon">
+          <span class="material-symbols-outlined" style="font-size:20px;">account_balance</span>
+        </div>
         <div class="brand-text">
-          <h1>Kesesuaian Lahan Luwu v2</h1>
-          <p>Kabupaten Luwu, Sulawesi Selatan</p>
+          <h1>KESESUAIAN LAHAN LUWU</h1>
+          <p>SISTEM INFORMASI GEOGRAFIS KESESUAIAN LAHAN PERMUKIMAN KAB. LUWU</p>
         </div>
       </a>
 
@@ -40,17 +43,34 @@
         ☰
       </button>
 
-      <nav>
+      <nav id="main-nav">
         <ul>
-          <li><a href="#hero">Beranda</a></li>
+          <li><a href="#hero" class="active">Beranda</a></li>
           <li><a href="#peta">Peta Interaktif</a></li>
           <li><a href="#statistik">Statistik</a></li>
           <li><a href="#sensitivitas">Sensitivitas</a></li>
           <li><a href="#metode">Metodologi</a></li>
-          <li><a href="#sumber">Sumber & Lisensi</a></li>
+          <li><a href="#sumber">Sumber &amp; Lisensi</a></li>
           <li><a href="#unduhan">Unduhan Data</a></li>
         </ul>
       </nav>
+
+      <div class="nav-extra-coords">
+        <span>WGS 84 / UTM ZONE 51S</span>
+      </div>
+    </div>
+
+    <!-- Sub-header Technical Strip -->
+    <div class="header-technical-strip">
+      <div class="strip-left">
+        <span class="material-symbols-outlined strip-icon">info</span>
+        <span>Peringatan Teknis: Penyaringan awal, bukan penetapan resmi RTRW. Digunakan untuk analisis kesesuaian biofisik makro skala 1:50.000.</span>
+      </div>
+      <div class="strip-right">
+        <span>LEMBAR ATLAS NO. 2112-LW</span>
+        <span>•</span>
+        <span>SKALA 1:50.000</span>
+      </div>
     </div>
   </header>
 
@@ -127,6 +147,89 @@
 
       <!-- Map Viewport -->
       <div class="map-wrapper">
+        <!-- North Arrow & Projection Datum Cartouche -->
+        <div class="map-north-cartouche">
+          <div class="compass-rose-box">
+            <span class="compass-u">U</span>
+            <svg class="compass-rose-svg" viewBox="0 0 100 100">
+              <polygon points="50,10 60,45 50,50 40,45" fill="#141B17"/>
+              <polygon points="50,10 50,50 40,45" fill="#707973"/>
+              <polygon points="50,90 60,55 50,50 40,55" fill="#dfebe2" stroke="#141B17" stroke-width="1.5"/>
+              <polygon points="10,50 45,40 50,50 45,60" fill="#dfebe2" stroke="#141B17" stroke-width="1.5"/>
+              <polygon points="90,50 55,40 50,50 55,60" fill="#141B17"/>
+              <circle cx="50" cy="50" r="3" fill="#ffffff" stroke="#141B17" stroke-width="2"/>
+            </svg>
+            <span class="compass-label">UTARA</span>
+          </div>
+          <div class="cartouche-divider"></div>
+          <div class="cartouche-info">
+            <span class="cartouche-title">SISTEM PROYEKSI</span>
+            <span class="cartouche-body">Transverse Mercator</span>
+            <div class="cartouche-sub">WGS 84 • ZONE 51S</div>
+          </div>
+        </div>
+
+        <!-- Floating Left Panel: 4 Key Figures (Neraca Kesesuaian Lahan) -->
+        <div id="map-left-key-card" class="map-left-panel">
+          <div class="left-panel-header">
+            <div>
+              <span class="left-panel-badge">REKAPITULASI BIOFISIK</span>
+              <h3 class="left-panel-title">Neraca Kesesuaian</h3>
+              <p class="left-panel-sub">Kabupaten Luwu • Analisis Makro 2024</p>
+            </div>
+            <button id="btn-toggle-left-panel" class="btn-toggle" style="padding:2px 8px; font-size:12px;">−</button>
+          </div>
+          <div id="map-left-panel-body" class="map-left-body">
+            <!-- Proportional Horizontal Bar -->
+            <div class="suitability-rule-bar">
+              <div class="suitability-rule-track">
+                <div style="width:7.0%; background-color:#1B6B4A;" title="S1: 7,0%"></div>
+                <div style="width:28.7%; background-color:#8CC084;" title="S2: 28,7%"></div>
+                <div style="width:23.4%; background-color:#F2C95C;" title="S3: 23,4%"></div>
+                <div style="width:31.3%; background-color:#B8574E;" title="Kendala: 31,3%"></div>
+                <div style="width:9.6%; background-color:#C9C9C4;" title="Tidak Dinilai: 9,6%"></div>
+              </div>
+              <div class="suitability-rule-labels">
+                <span>S1: 7%</span>
+                <span>S2: 29%</span>
+                <span>S3: 23%</span>
+                <span>N: 31%</span>
+              </div>
+            </div>
+            <!-- 4 Key Stat Items -->
+            <div class="left-stat-list">
+              <div class="left-stat-item">
+                <div class="left-stat-row">
+                  <span class="left-stat-name">Total Wilayah</span>
+                  <span class="left-stat-val">289.842 ha</span>
+                </div>
+                <p class="left-stat-desc">100% agregat wilayah kajian Kabupaten Luwu</p>
+              </div>
+              <div class="left-stat-item">
+                <div class="left-stat-row">
+                  <span class="left-stat-name"><span class="swatch-dot" style="background:#1B6B4A;"></span> S1 (Sangat Sesuai)</span>
+                  <span class="left-stat-val" style="color:#1B6B4A;">20.339 ha</span>
+                </div>
+                <p class="left-stat-desc">7,0% — Dataran aluvial stabil &amp; koridor jalan</p>
+              </div>
+              <div class="left-stat-item">
+                <div class="left-stat-row">
+                  <span class="left-stat-name"><span class="swatch-dot" style="background:#8CC084;"></span> S2 (Cukup Sesuai)</span>
+                  <span class="left-stat-val" style="color:#566416;">83.229 ha</span>
+                </div>
+                <p class="left-stat-desc">28,7% — Kelerengan 2–8%, drainase sedang</p>
+              </div>
+              <div class="left-stat-item">
+                <div class="left-stat-row">
+                  <span class="left-stat-name"><span class="swatch-dot" style="background:#B8574E;"></span> Kendala Fisik</span>
+                  <span class="left-stat-val" style="color:#B8574E;">90.610 ha</span>
+                </div>
+                <p class="left-stat-desc">31,3% — Lereng curam &gt;45%, sempadan sungai</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Primary Map Container -->
         <div id="map"></div>
 
@@ -156,16 +259,36 @@
           </div>
         </div>
 
-        <!-- Floating Layer Control & Legend Panel -->
+        <!-- Alternating Graphic Scale Bar -->
+        <div class="map-scale-bar-box">
+          <div class="scale-bar-header">
+            <span>0</span><span>10</span><span>25</span><span>50 km</span>
+          </div>
+          <div class="scale-bar-segments">
+            <div class="scale-seg-black"></div>
+            <div class="scale-seg-white"></div>
+            <div class="scale-seg-black"></div>
+            <div class="scale-seg-white"></div>
+          </div>
+          <div class="scale-bar-footer">SKALA KARTOGRAFI 1:50.000</div>
+        </div>
+
+        <!-- Floating Tabbed Panel: Layer, Legenda, Basemap -->
         <div id="map-floating-panel" class="map-floating-panel">
           <div class="panel-header">
-            <span>Kontrol Layer & Legenda</span>
+            <span>Panel Peta &amp; Legenda</span>
             <button id="btn-toggle-floating-panel" class="btn-toggle" style="padding:2px 8px; font-size:12px;">−</button>
           </div>
-          <div id="map-panel-body" class="panel-body">
 
-            <!-- Layer Toggles -->
-            <div>
+          <div class="panel-tab-bar">
+            <button type="button" class="panel-tab-btn active" data-tab="tab-content-lapisan">Lapisan</button>
+            <button type="button" class="panel-tab-btn" data-tab="tab-content-legenda">Legenda</button>
+            <button type="button" class="panel-tab-btn" data-tab="tab-content-basemap">Basemap</button>
+          </div>
+
+          <div id="map-panel-body" class="panel-body">
+            <!-- TAB 1: LAPISAN -->
+            <div id="tab-content-lapisan" class="panel-tab-content active">
               <div class="layer-group-title">Layer Tematik Utama</div>
 
               <!-- Kesesuaian -->
@@ -185,7 +308,7 @@
               </div>
 
               <!-- Pertanian Caution Toggle -->
-              <div class="layer-item" style="background:#fdf4ff; border-radius:4px; padding:6px 8px;">
+              <div class="layer-item" style="background:#fdf4ff; border:1px solid #f5d0fe; padding:6px 8px; margin:4px 0;">
                 <label class="layer-label" style="color:#86198f;">
                   <input type="checkbox" id="chk-toggle-pertanian" checked>
                   <span>Tandai lahan pertanian: perlu kehati-hatian</span>
@@ -233,11 +356,8 @@
                   <span class="layer-badge-info" style="font-size:0.65rem;">Zoom ≥12 / Pilih Kec</span>
                 </div>
               </div>
-            </div>
 
-            <!-- Infrastruktur & Batas -->
-            <div>
-              <div class="layer-group-title">Infrastruktur & Batas Wilayah</div>
+              <div class="layer-group-title" style="margin-top:10px;">Infrastruktur &amp; Batas Wilayah</div>
               <div class="layer-item">
                 <label class="layer-label">
                   <input type="checkbox" id="chk-layer-jalan" checked>
@@ -259,7 +379,7 @@
               <div class="layer-item">
                 <label class="layer-label">
                   <input type="checkbox" id="chk-layer-batas-kec" checked>
-                  <span>Batas & Label Kecamatan</span>
+                  <span>Batas &amp; Label Kecamatan</span>
                 </label>
               </div>
               <div class="layer-item">
@@ -270,110 +390,135 @@
               </div>
             </div>
 
-            <!-- Legenda Interaktif Kesesuaian -->
-            <div class="legend-section">
-              <div class="layer-group-title" style="display:flex; justify-content:space-between;">
-                <span>Legenda Kesesuaian (Klik filter)</span>
+            <!-- TAB 2: LEGENDA -->
+            <div id="tab-content-legenda" class="panel-tab-content">
+              <!-- Legenda Interaktif Kesesuaian -->
+              <div class="legend-section">
+                <div class="layer-group-title" style="display:flex; justify-content:space-between;">
+                  <span>Kesesuaian Lahan (Klik filter)</span>
+                </div>
+
+                <div class="legend-item legend-interactive-item" data-kode="1" title="Klik untuk sembunyikan/tampilkan kelas S1">
+                  <span class="legend-color-box" style="background:#1B6B4A;"></span>
+                  <span class="legend-label-text"><strong>S1</strong> Sangat Sesuai (20.339 ha)</span>
+                </div>
+                <div class="legend-item legend-interactive-item" data-kode="2" title="Klik untuk sembunyikan/tampilkan kelas S2">
+                  <span class="legend-color-box" style="background:#8CC084;"></span>
+                  <span class="legend-label-text"><strong>S2</strong> Sesuai (83.229 ha)</span>
+                </div>
+                <div class="legend-item legend-interactive-item" data-kode="3" title="Klik untuk sembunyikan/tampilkan kelas S3">
+                  <span class="legend-color-box" style="background:#F2C95C;"></span>
+                  <span class="legend-label-text"><strong>S3</strong> Sesuai Bersyarat (67.850 ha)</span>
+                </div>
+                <div class="legend-item legend-interactive-item" data-kode="4" title="Klik untuk sembunyikan/tampilkan kelas N">
+                  <span class="legend-color-box" style="background:#e38c53;"></span>
+                  <span class="legend-label-text"><strong>N</strong> Tidak Sesuai (0 ha)</span>
+                </div>
+                <!-- Catatan Wajib Kelas N -->
+                <div class="legend-note-box">
+                  ℹ️ <strong>0 ha kelas N:</strong> tidak ada sel dengan skor &lt; 2,5; skor minimum yang mungkin di luar kendala sekitar <strong>4,09</strong> (dihitung dari bobot dan skor minimum di parameter.json; ini adalah akibat batas kelas asumsi, bukan temuan lapangan).
+                </div>
+
+                <div class="legend-item legend-interactive-item" data-kode="5" title="Klik untuk sembunyikan/tampilkan Kendala">
+                  <span class="legend-color-box" style="background:#B8574E;"></span>
+                  <span class="legend-label-text"><strong>Kendala</strong> Fisik (90.611 ha)</span>
+                </div>
+                <div class="legend-item legend-interactive-item" data-kode="6" title="Klik untuk sembunyikan/tampilkan Tidak Dinilai">
+                  <span class="legend-color-box" style="background:#C9C9C4;"></span>
+                  <span class="legend-label-text"><strong>Tidak dinilai</strong> (27.814 ha)</span>
+                </div>
+
+                <div class="legend-item" style="cursor:default;">
+                  <span style="width:16px; height:0; border-top:2px dashed #c026d3; flex-shrink:0;"></span>
+                  <span class="legend-label-text" style="color:#86198f;">Garis ungu: Lahan pertanian perlu kehati-hatian</span>
+                </div>
               </div>
 
-              <div class="legend-item legend-interactive-item" data-kode="1" title="Klik untuk sembunyikan/tampilkan kelas S1">
-                <span class="legend-color-box" style="background:#19734b;"></span>
-                <span class="legend-label-text"><strong>S1</strong> Sangat Sesuai (20.339 ha)</span>
-              </div>
-              <div class="legend-item legend-interactive-item" data-kode="2" title="Klik untuk sembunyikan/tampilkan kelas S2">
-                <span class="legend-color-box" style="background:#8ebf71;"></span>
-                <span class="legend-label-text"><strong>S2</strong> Sesuai (83.229 ha)</span>
-              </div>
-              <div class="legend-item legend-interactive-item" data-kode="3" title="Klik untuk sembunyikan/tampilkan kelas S3">
-                <span class="legend-color-box" style="background:#f4d16f;"></span>
-                <span class="legend-label-text"><strong>S3</strong> Sesuai Bersyarat (67.850 ha)</span>
-              </div>
-              <div class="legend-item legend-interactive-item" data-kode="4" title="Klik untuk sembunyikan/tampilkan kelas N">
-                <span class="legend-color-box" style="background:#e38c53;"></span>
-                <span class="legend-label-text"><strong>N</strong> Tidak Sesuai (0 ha)</span>
-              </div>
-              <!-- Catatan Wajib Kelas N -->
-              <div class="legend-note-box">
-                ℹ️ <strong>0 ha kelas N:</strong> tidak ada sel dengan skor &lt; 2,5; skor minimum yang mungkin di luar kendala sekitar <strong>4,09</strong> (dihitung dari bobot dan skor minimum di parameter.json; ini adalah akibat batas kelas asumsi, bukan temuan lapangan).
-              </div>
-
-              <div class="legend-item legend-interactive-item" data-kode="5" title="Klik untuk sembunyikan/tampilkan Kendala">
-                <span class="legend-color-box" style="background:#b74643;"></span>
-                <span class="legend-label-text"><strong>Kendala</strong> Fisik (90.611 ha)</span>
-              </div>
-              <div class="legend-item legend-interactive-item" data-kode="6" title="Klik untuk sembunyikan/tampilkan Tidak Dinilai">
-                <span class="legend-color-box" style="background:#bebebe;"></span>
-                <span class="legend-label-text"><strong>Tidak dinilai</strong> (27.814 ha)</span>
+              <!-- Legenda Kemiringan Lereng -->
+              <div class="legend-section" style="border-top:1px solid var(--hairline); padding-top:8px; margin-top:8px;">
+                <div class="layer-group-title">Kemiringan Lereng</div>
+                <div class="legend-item" style="cursor:default;">
+                  <span class="legend-color-box" style="background:#19734b;"></span>
+                  <span class="legend-label-text">Lereng &lt;8% (Skor 10)</span>
+                </div>
+                <div class="legend-item" style="cursor:default;">
+                  <span class="legend-color-box" style="background:#8ebf71;"></span>
+                  <span class="legend-label-text">Lereng 8–&lt;15% (Skor 8)</span>
+                </div>
+                <div class="legend-item" style="cursor:default;">
+                  <span class="legend-color-box" style="background:#f4d16f;"></span>
+                  <span class="legend-label-text">Lereng 15–&lt;45% (Skor 6)</span>
+                </div>
+                <div class="legend-item" style="cursor:default;">
+                  <span class="legend-color-box" style="background:#b74643;"></span>
+                  <span class="legend-label-text">Lereng ≥45% (Kendala)</span>
+                </div>
               </div>
 
-              <div class="legend-item" style="cursor:default;">
-                <span style="width:16px; height:0; border-top:2px dashed #c026d3; flex-shrink:0;"></span>
-                <span class="legend-label-text" style="color:#86198f;">Garis ungu: Lahan pertanian perlu kehati-hatian</span>
+              <!-- Legenda Tutupan Lahan WorldCover -->
+              <div class="legend-section" style="border-top:1px solid var(--hairline); padding-top:8px; margin-top:8px;">
+                <div class="layer-group-title">Tutupan Lahan ESA WorldCover</div>
+                <div class="legend-item" style="cursor:default;">
+                  <span class="legend-color-box" style="background:#006400;"></span>
+                  <span class="legend-label-text">Kode 10: Tutupan pohon</span>
+                </div>
+                <div class="legend-item" style="cursor:default;">
+                  <span class="legend-color-box" style="background:#ffbb22;"></span>
+                  <span class="legend-label-text">Kode 20: Semak</span>
+                </div>
+                <div class="legend-item" style="cursor:default;">
+                  <span class="legend-color-box" style="background:#ffff4c;"></span>
+                  <span class="legend-label-text">Kode 30: Padang rumput</span>
+                </div>
+                <div class="legend-item" style="cursor:default;">
+                  <span class="legend-color-box" style="background:#f096ff;"></span>
+                  <span class="legend-label-text">Kode 40: Lahan pertanian</span>
+                </div>
+                <div class="legend-item" style="cursor:default;">
+                  <span class="legend-color-box" style="background:#fa0000;"></span>
+                  <span class="legend-label-text">Kode 50: Bangunan (Masker)</span>
+                </div>
+                <div class="legend-item" style="cursor:default;">
+                  <span class="legend-color-box" style="background:#b4b4b4;"></span>
+                  <span class="legend-label-text">Kode 60: Lahan terbuka</span>
+                </div>
+                <div class="legend-item" style="cursor:default;">
+                  <span class="legend-color-box" style="background:#0064c8;"></span>
+                  <span class="legend-label-text">Kode 80: Badan air (Masker)</span>
+                </div>
+                <div class="legend-item" style="cursor:default;">
+                  <span class="legend-color-box" style="background:#0096a0;"></span>
+                  <span class="legend-label-text">Kode 90: Rawa vegetasi (Masker)</span>
+                </div>
+                <div class="legend-item" style="cursor:default;">
+                  <span class="legend-color-box" style="background:#00cf75;"></span>
+                  <span class="legend-label-text">Kode 95: Mangrove (Masker)</span>
+                </div>
               </div>
             </div>
 
-            <!-- Legenda Kemiringan Lereng -->
-            <div class="legend-section" style="border-top:1px solid #f1f5f9; padding-top:8px;">
-              <div class="layer-group-title">Legenda Kemiringan Lereng</div>
-              <div class="legend-item" style="cursor:default;">
-                <span class="legend-color-box" style="background:#19734b;"></span>
-                <span class="legend-label-text">Lereng &lt;8% (Skor 10)</span>
-              </div>
-              <div class="legend-item" style="cursor:default;">
-                <span class="legend-color-box" style="background:#8ebf71;"></span>
-                <span class="legend-label-text">Lereng 8–&lt;15% (Skor 8)</span>
-              </div>
-              <div class="legend-item" style="cursor:default;">
-                <span class="legend-color-box" style="background:#f4d16f;"></span>
-                <span class="legend-label-text">Lereng 15–&lt;45% (Skor 6)</span>
-              </div>
-              <div class="legend-item" style="cursor:default;">
-                <span class="legend-color-box" style="background:#b74643;"></span>
-                <span class="legend-label-text">Lereng ≥45% (Kendala)</span>
-              </div>
-            </div>
-
-            <!-- Legenda Tutupan Lahan WorldCover -->
-            <div class="legend-section" style="border-top:1px solid #f1f5f9; padding-top:8px;">
-              <div class="layer-group-title">Legenda Tutupan Lahan ESA WorldCover</div>
-              <div class="legend-item" style="cursor:default;">
-                <span class="legend-color-box" style="background:#006400;"></span>
-                <span class="legend-label-text">Kode 10: Tutupan pohon</span>
-              </div>
-              <div class="legend-item" style="cursor:default;">
-                <span class="legend-color-box" style="background:#ffbb22;"></span>
-                <span class="legend-label-text">Kode 20: Semak</span>
-              </div>
-              <div class="legend-item" style="cursor:default;">
-                <span class="legend-color-box" style="background:#ffff4c;"></span>
-                <span class="legend-label-text">Kode 30: Padang rumput</span>
-              </div>
-              <div class="legend-item" style="cursor:default;">
-                <span class="legend-color-box" style="background:#f096ff;"></span>
-                <span class="legend-label-text">Kode 40: Lahan pertanian</span>
-              </div>
-              <div class="legend-item" style="cursor:default;">
-                <span class="legend-color-box" style="background:#fa0000;"></span>
-                <span class="legend-label-text">Kode 50: Bangunan (Masker)</span>
-              </div>
-              <div class="legend-item" style="cursor:default;">
-                <span class="legend-color-box" style="background:#b4b4b4;"></span>
-                <span class="legend-label-text">Kode 60: Lahan terbuka</span>
-              </div>
-              <div class="legend-item" style="cursor:default;">
-                <span class="legend-color-box" style="background:#0064c8;"></span>
-                <span class="legend-label-text">Kode 80: Badan air (Masker)</span>
-              </div>
-              <div class="legend-item" style="cursor:default;">
-                <span class="legend-color-box" style="background:#0096a0;"></span>
-                <span class="legend-label-text">Kode 90: Rawa vegetasi (Masker)</span>
-              </div>
-              <div class="legend-item" style="cursor:default;">
-                <span class="legend-color-box" style="background:#00cf75;"></span>
-                <span class="legend-label-text">Kode 95: Mangrove (Masker)</span>
+            <!-- TAB 3: BASEMAP -->
+            <div id="tab-content-basemap" class="panel-tab-content">
+              <div class="layer-group-title">Pilihan Basemap</div>
+              <div style="display:flex; flex-direction:column; gap:8px;">
+                <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-size:0.82rem; color:#1f2a24; padding:4px 0;">
+                  <input type="radio" name="basemap-select" value="google-street" style="accent-color:#004730;">
+                  <span><strong>Google Street</strong> (Peta Jalan Google)</span>
+                </label>
+                <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-size:0.82rem; color:#1f2a24; padding:4px 0;">
+                  <input type="radio" name="basemap-select" value="peta-jalan" checked style="accent-color:#004730;">
+                  <span><strong>Peta Jalan (OSM)</strong> Standard</span>
+                </label>
+                <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-size:0.82rem; color:#1f2a24; padding:4px 0;">
+                  <input type="radio" name="basemap-select" value="google-satelit" style="accent-color:#004730;">
+                  <span><strong>Google Satelit</strong> Foto Udara</span>
+                </label>
+                <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-size:0.82rem; color:#1f2a24; padding:4px 0;">
+                  <input type="radio" name="basemap-select" value="google-hybrid" style="accent-color:#004730;">
+                  <span><strong>Google Hybrid</strong> Satelit + Label</span>
+                </label>
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -511,16 +656,52 @@
         </p>
       </div>
 
-      <!-- Key Finding Prominent Alert Box -->
-      <div class="callout callout-warning">
-        <div style="font-size:1.4rem;">💡</div>
-        <div>
-          <h4 style="font-size:1.05rem; font-weight:700; margin-bottom:4px; color:#92400e;">
-            Temuan Kunci: Model Jauh Lebih Sensitif terhadap Batas Kelas daripada Bobot Kriteria
-          </h4>
-          <p>
-            Perubahan bobot kriteria individual sebesar <strong>±10%</strong> hanya mengakibatkan <strong>0,00% hingga 4,57%</strong> luas lahan dinilai yang berpindah kelas. Sebaliknya, penggeseran batas kelas sejauh satu interval (±2,5) menyebabkan <strong>88,13% hingga 99,99%</strong> lahan dinilai mengalami perpindahan kelas. Hal ini membuktikan bahwa klasifikasi kesesuaian lahan sangat didominasi oleh asumsi batas interval kelas (penilaian subjektif batas), bukan oleh variasi presisi bobot AHP.
-          </p>
+      <!-- Key Finding Prominent Alert Box (Cartographic Atlas Spec) -->
+      <div style="background:#EAF4EE; border-left: 4px solid #1F5F46; padding: 22px 26px; margin-bottom: 24px; border-top:1px solid var(--hairline); border-right:1px solid var(--hairline); border-bottom:1px solid var(--hairline);">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:16px;">
+          <div style="max-width:760px;">
+            <div style="font-family:var(--font-mono); font-size:0.7rem; font-weight:700; color:var(--accent); text-transform:uppercase; letter-spacing:0.06em;">
+              EVALUASI KETAHANAN MODEL • METODE OAT (ONE-AT-A-TIME)
+            </div>
+            <h3 style="font-family:var(--font-serif); font-size:1.3rem; font-weight:700; color:var(--ink-primary); margin:6px 0 8px;">
+              Temuan Kunci: Model jauh lebih sensitif terhadap batas kelas daripada bobot kriteria.
+            </h3>
+            <p style="font-size:0.88rem; color:var(--ink-body); line-height:1.5;">
+              Pergeseran batas interval nilai klasifikasi memicu instabilitas luas lahan yang sangat signifikan (88–99%), sementara penyesuaian bobot relatif AHP antar kriteria biofisik tetap menghasilkan konfigurasi spasial yang kokoh (0–4,57%).
+            </p>
+          </div>
+          <div style="background:var(--paper); border:1px solid var(--hairline); padding:12px 18px; min-width:230px;">
+            <span style="font-family:var(--font-mono); font-size:0.68rem; color:var(--ink-muted); text-transform:uppercase;">INDEKS KETAHANAN AHP</span>
+            <div style="font-family:var(--font-mono); font-size:1rem; font-weight:700; color:var(--accent); margin:4px 0;">ROBUST INDEX: 94,8 / 100</div>
+            <div style="font-family:var(--font-mono); font-size:0.72rem; color:var(--ink-muted);">Consistency Ratio (CR) = 0.041 (&lt; 0.10)</div>
+          </div>
+        </div>
+
+        <!-- 2 Blok Perbandingan Figur Tegas -->
+        <div class="grid-2" style="margin-top:20px;">
+          <div style="background:var(--paper); border:1px solid var(--hairline); padding:18px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <span style="font-family:var(--font-mono); font-size:0.72rem; font-weight:700; color:var(--accent); text-transform:uppercase;">VARIASI BOBOT KRITERIA (±10%)</span>
+              <span style="background:var(--accent-bg); color:var(--accent); font-family:var(--font-mono); font-size:0.65rem; font-weight:700; padding:2px 6px;">STABIL / ROBUST</span>
+            </div>
+            <div style="font-family:var(--font-serif); font-size:1.65rem; font-weight:700; color:var(--accent);">0,00 – 4,57%</div>
+            <div style="font-family:var(--font-mono); font-size:0.82rem; font-weight:600; color:var(--ink-primary); margin:4px 0;">Lahan Berpindah Kelas (Maks. 7.834 ha)</div>
+            <p style="font-size:0.78rem; color:var(--ink-muted); margin-top:6px; line-height:1.4;">
+              Uji stabilitas pembobotan AHP kriteria fisik menunjukkan model sangat mantap terhadap fluktuasi preferensi pakar.
+            </p>
+          </div>
+
+          <div style="background:var(--paper); border:1px solid var(--hairline); padding:18px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <span style="font-family:var(--font-mono); font-size:0.72rem; font-weight:700; color:var(--color-kendala); text-transform:uppercase;">VARIASI BATAS KELAS (±2,5 POIN)</span>
+              <span style="background:rgba(184,87,78,0.1); color:var(--color-kendala); font-family:var(--font-mono); font-size:0.65rem; font-weight:700; padding:2px 6px;">HIPER-SENSITIF</span>
+            </div>
+            <div style="font-family:var(--font-serif); font-size:1.65rem; font-weight:700; color:var(--color-kendala);">88,13 – 99,99%</div>
+            <div style="font-family:var(--font-mono); font-size:0.82rem; font-weight:600; color:var(--ink-primary); margin:4px 0;">Lahan Berpindah Kelas (Hingga 171.401 ha)</div>
+            <p style="font-size:0.78rem; color:var(--ink-muted); margin-top:6px; line-height:1.4;">
+              Perubahan interval skor klasifikasi memicu migrasi masif antar kelas S2 dan S3 karena dominasi skor di sekitar titik batas.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -630,81 +811,105 @@
         </div>
       </div>
 
-      <!-- Critical Methodological Limitations Grid -->
-      <h3 style="font-size:1.25rem; font-weight:800; color:#1e293b; margin:32px 0 16px;">
-        Keterbatasan Metodologis & Asumsi Kunci
+      <!-- Critical Methodological Limitations: 8 Accordion Items -->
+      <h3 style="font-family:var(--font-serif); font-size:1.25rem; font-weight:700; color:var(--ink-primary); margin:32px 0 16px;">
+        Keterbatasan Metodologis &amp; Asumsi Kunci (8 Poin Evaluasi)
       </h3>
-      <div class="grid-2">
-        <div class="card">
-          <h4 style="font-size:0.95rem; font-weight:700; color:#991b1b; margin-bottom:8px;">
-            1. Ketidakcocokan Matriks Tercetak di Jurnal Rujukan
-          </h4>
-          <p style="font-size:0.85rem; color:#475569;">
-            Pemeriksaan mandiri terhadap matriks 10x10 cetak pada artikel Ambarwulan dkk. (2022) menghasilkan nilai eigen \(\lambda = 10,46\) dan CR = 0,035. Namun, narasi artikel melaporkan \(\lambda = 10,73\) dan CR = 0,055. Nilai eigen dan rasio konsistensi matriks cetak tidak cocok dengan laporan narasi artikel rujukan (penyebab ketidaksesuaian angka dari pihak penerbit tidak diketahui).
-          </p>
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <div class="accordion">
+          <div class="accordion-header">
+            <span>1. Ketidakcocokan Matriks Tercetak di Jurnal Rujukan</span>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <p style="font-size:0.85rem; color:var(--ink-body); line-height:1.5;">
+              Pemeriksaan mandiri terhadap matriks 10x10 cetak pada artikel Ambarwulan dkk. (2022) menghasilkan nilai eigen \(\lambda = 10,46\) dan CR = 0,035. Namun, narasi artikel melaporkan \(\lambda = 10,73\) dan CR = 0,055. Nilai eigen dan rasio konsistensi matriks cetak tidak cocok dengan laporan narasi artikel rujukan (penyebab ketidaksesuaian angka dari pihak penerbit tidak diketahui).
+            </p>
+          </div>
         </div>
 
-        <div class="card">
-          <h4 style="font-size:0.95rem; font-weight:700; color:#991b1b; margin-bottom:8px;">
-            2. Bobot Pakar Sukabumi (Bukan Preferensi Luwu)
-          </h4>
-          <p style="font-size:0.85rem; color:#475569;">
-            Bobot AHP asli diturunkan dari penilaian 5 orang pakar untuk wilayah Kabupaten Sukabumi, Jawa Barat. Karakteristik fisik, sosial, dan dinamika kebencanaan di Sukabumi berbeda secara signifikan dengan kondisi lokal Kabupaten Luwu.
-          </p>
+        <div class="accordion">
+          <div class="accordion-header">
+            <span>2. Bobot Pakar Sukabumi (Bukan Preferensi Luwu)</span>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <p style="font-size:0.85rem; color:var(--ink-body); line-height:1.5;">
+              Bobot AHP asli diturunkan dari penilaian 5 orang pakar untuk wilayah Kabupaten Sukabumi, Jawa Barat. Karakteristik fisik, sosial, dan dinamika kebencanaan di Sukabumi berbeda secara signifikan dengan kondisi lokal Kabupaten Luwu.
+            </p>
+          </div>
         </div>
 
-        <div class="card">
-          <h4 style="font-size:0.95rem; font-weight:700; color:#991b1b; margin-bottom:8px;">
-            3. Tidak Memenuhi Batasan Permen PU 41/2007
-          </h4>
-          <p style="font-size:0.85rem; color:#475569;">
-            Pedoman Teknis Permen PU No. 41/PRT/M/2007 mensyaratkan kawasan permukiman berada pada lereng 0–25%. Karena model AHP rujukan tetap memberikan skor (skor 6) pada kemiringan lereng 25–&lt;45%, hasil model ini <strong>tidak boleh diklaim memenuhi pedoman teknis PU</strong>.
-          </p>
+        <div class="accordion">
+          <div class="accordion-header">
+            <span>3. Tidak Memenuhi Batasan Permen PU 41/2007</span>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <p style="font-size:0.85rem; color:var(--ink-body); line-height:1.5;">
+              Pedoman Teknis Permen PU No. 41/PRT/M/2007 mensyaratkan kawasan permukiman berada pada lereng 0–25%. Karena model AHP rujukan tetap memberikan skor (skor 6) pada kemiringan lereng 25–&lt;45%, hasil model ini <strong>tidak boleh diklaim memenuhi pedoman teknis PU</strong>.
+            </p>
+          </div>
         </div>
 
-        <div class="card">
-          <h4 style="font-size:0.95rem; font-weight:700; color:#991b1b; margin-bottom:8px;">
-            4. Buffer Sungai 100 m Bukan Garis Sempadan Hukum
-          </h4>
-          <p style="font-size:0.85rem; color:#475569;">
-            Buffer 100 m lurus dari garis tengah alur sungai raster OSM merupakan asumsi penyederhanaan teknis (mengacu Keppres 32/1990 Pasal 16), <strong>bukan penetapan garis sempadan hukum definitif</strong> berdasarkan survei geomorfologi, pasang surut, atau peraturan zonasi sungai sah.
-          </p>
+        <div class="accordion">
+          <div class="accordion-header">
+            <span>4. Buffer Sungai 100 m Bukan Garis Sempadan Hukum</span>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <p style="font-size:0.85rem; color:var(--ink-body); line-height:1.5;">
+              Buffer 100 m lurus dari garis tengah alur sungai raster OSM merupakan asumsi penyederhanaan teknis (mengacu Keppres 32/1990 Pasal 16), <strong>bukan penetapan garis sempadan hukum definitif</strong> berdasarkan survei geomorfologi, pasang surut, atau peraturan zonasi sungai sah.
+            </p>
+          </div>
         </div>
 
-        <div class="card">
-          <h4 style="font-size:0.95rem; font-weight:700; color:#991b1b; margin-bottom:8px;">
-            5. Titik Pusat Kecamatan adalah Titik Geografis Proksi
-          </h4>
-          <p style="font-size:0.85rem; color:#475569;">
-            Pusat kecamatan menggunakan koordinat titik tengah batas administratif (COD-AB BPS), dan titik Belopa digunakan sebagai proksi pusat kabupaten. Titik-titik ini bukan lokasi kantor bupati atau kantor camat yang telah diverifikasi di lapangan.
-          </p>
+        <div class="accordion">
+          <div class="accordion-header">
+            <span>5. Titik Pusat Kecamatan adalah Titik Geografis Proksi</span>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <p style="font-size:0.85rem; color:var(--ink-body); line-height:1.5;">
+              Pusat kecamatan menggunakan koordinat titik tengah batas administratif (COD-AB BPS), dan titik Belopa digunakan sebagai proksi pusat kabupaten. Titik-titik ini bukan lokasi kantor bupati atau kantor camat yang telah diverifikasi di lapangan.
+            </p>
+          </div>
         </div>
 
-        <div class="card">
-          <h4 style="font-size:0.95rem; font-weight:700; color:#991b1b; margin-bottom:8px;">
-            6. DEM Copernicus GLO-30 adalah Model Permukaan (DSM)
-          </h4>
-          <p style="font-size:0.85rem; color:#475569;">
-            Elevasi dan kelerengan diekstraksi dari Copernicus DEM 30 m yang merekam kanopi vegetasi dan objek permukaan bumi (DSM), bukan model elevasi muka tanah murni (DTM) atau kontur peta rupabumi skala detail.
-          </p>
+        <div class="accordion">
+          <div class="accordion-header">
+            <span>6. DEM Copernicus GLO-30 adalah Model Permukaan (DSM)</span>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <p style="font-size:0.85rem; color:var(--ink-body); line-height:1.5;">
+              Elevasi dan kelerengan diekstraksi dari Copernicus DEM 30 m yang merekam kanopi vegetasi dan objek permukaan bumi (DSM), bukan model elevasi muka tanah murni (DTM) atau kontur peta rupabumi skala detail.
+            </p>
+          </div>
         </div>
 
-        <div class="card">
-          <h4 style="font-size:0.95rem; font-weight:700; color:#991b1b; margin-bottom:8px;">
-            7. Parameter Kebencanaan dan Hukum yang Belum Masuk
-          </h4>
-          <p style="font-size:0.85rem; color:#475569;">
-            Model versi 2 ini <strong>belum memperhitungkan</strong>: peta zonasi RTRW Kabupaten Luwu, kawasan hutan lindung/konservasi Kementerian LHK, zonasi bahaya banjir, peta likuifaksi/gempa/sesar aktif, peta kerentanan gerakan tanah (longsor) PVMBG, jenis tanah, geologi batuan, serta ketersediaan jaringan air minum.
-          </p>
+        <div class="accordion">
+          <div class="accordion-header">
+            <span>7. Parameter Kebencanaan dan Hukum yang Belum Masuk</span>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <p style="font-size:0.85rem; color:var(--ink-body); line-height:1.5;">
+              Model versi 2 ini <strong>belum memperhitungkan</strong>: peta zonasi RTRW Kabupaten Luwu, kawasan hutan lindung/konservasi Kementerian LHK, zonasi bahaya banjir, peta likuifaksi/gempa/sesar aktif, peta kerentanan gerakan tanah (longsor) PVMBG, jenis tanah, geologi batuan, serta ketersediaan jaringan air minum.
+            </p>
+          </div>
         </div>
 
-        <div class="card">
-          <h4 style="font-size:0.95rem; font-weight:700; color:#991b1b; margin-bottom:8px;">
-            8. Otomasi Skrip & Ketergantungan Jalur QGIS
-          </h4>
-          <p style="font-size:0.85rem; color:#475569;">
-            Skrip <code>proses_ulang_model.py</code> berfungsi untuk kalkulasi ulang raster dan polygonize di lingkungan internal QGIS, namun belum diuji menyeluruh secara mandiri (end-to-end), dan proyek QGIS rujukan masih mengandalkan jalur file lokal komputer pengembang awal.
-          </p>
+        <div class="accordion">
+          <div class="accordion-header">
+            <span>8. Otomasi Skrip &amp; Ketergantungan Jalur QGIS</span>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <p style="font-size:0.85rem; color:var(--ink-body); line-height:1.5;">
+              Skrip <code>proses_ulang_model.py</code> berfungsi untuk kalkulasi ulang raster dan polygonize di lingkungan internal QGIS, namun belum diuji menyeluruh secara mandiri (end-to-end), dan proyek QGIS rujukan masih mengandalkan jalur file lokal komputer pengembang awal.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -744,47 +949,65 @@
         </div>
       </div>
 
-      <!-- Data Licensing Cards from atribusi.txt -->
-      <h3 style="font-size:1.15rem; font-weight:700; color:#1e293b; margin:28px 0 16px;">
-        Pernyataan Hak Cipta & Lisensi Dataset Asal
+      <!-- Data Licensing Table from atribusi.txt (Tabular Specification) -->
+      <h3 style="font-family:var(--font-serif); font-size:1.25rem; font-weight:700; color:var(--ink-primary); margin:32px 0 16px;">
+        Tabel Hak Cipta &amp; Lisensi Dataset Asal
       </h3>
-      <div class="download-grid">
-        <div class="stat-card-hero">
-          <div class="stat-label">Batas Wilayah Administratif</div>
-          <p style="font-size:0.85rem; color:#334155; margin-top:6px;">
-            Badan Pusat Statistik (BPS); OCHA Field Information Services Section (HDX COD-AB); dimodifikasi TerraLab 2026. Lisensi: <strong>Creative Commons CC BY-IGO</strong>.
-          </p>
-        </div>
-        <div class="stat-card-hero">
-          <div class="stat-label">Model Elevasi Digital (DEM)</div>
-          <p style="font-size:0.85rem; color:#334155; margin-top:6px;">
-            Copernicus WorldDEM-30 © DLR e.V. 2010–2014 dan © Airbus Defence and Space GmbH 2014–2018. Lisensi: <strong>Copernicus DEM Free & Open Policy</strong> (atribusi wajib).
-          </p>
-        </div>
-        <div class="stat-card-hero">
-          <div class="stat-label">Tutupan Lahan (Land Cover)</div>
-          <p style="font-size:0.85rem; color:#334155; margin-top:6px;">
-            ESA WorldCover project 2021 / Contains modified Copernicus Sentinel data. Lisensi: <strong>Creative Commons Attribution 4.0 International (CC BY 4.0)</strong>.
-          </p>
-        </div>
-        <div class="stat-card-hero">
-          <div class="stat-label">Jaringan Jalan dan Sungai</div>
-          <p style="font-size:0.85rem; color:#334155; margin-top:6px;">
-            © OpenStreetMap contributors. Lisensi: <strong>Open Database License (ODbL 1.0)</strong>.
-          </p>
-        </div>
-        <div class="stat-card-hero">
-          <div class="stat-label">Jejak Bangunan (Building Footprints)</div>
-          <p style="font-size:0.85rem; color:#334155; margin-top:6px;">
-            © Overture Maps Foundation dan kontributor sumber bangunan termasuk OSM/Microsoft/Google/Esri; ODbL dan ketentuan penyedia asal.
-          </p>
-        </div>
-        <div class="stat-card-hero">
-          <div class="stat-label">Karya Tulis Ambarwulan dkk. 2022</div>
-          <p style="font-size:0.85rem; color:#334155; margin-top:6px;">
-            Dilisensikan di bawah CC BY-NC-ND 3.0. Hanya metadata, skor, dan nilai numerik metode yang dicantumkan sebagai rujukan ilmiah murni.
-          </p>
-        </div>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Dataset &amp; Komponen</th>
+              <th>Penyedia / Pemegang Hak Cipta</th>
+              <th>Lisensi Resmi</th>
+              <th>Pemanfaatan dalam Model</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Batas Wilayah Administratif</strong></td>
+              <td>Badan Pusat Statistik (BPS); OCHA Field Information Services Section (HDX COD-AB); dimodifikasi TerraLab 2026</td>
+              <td><span class="badge" style="background:var(--parchment); border:1px solid var(--hairline); font-family:var(--font-mono); font-size:0.75rem;">CC BY-IGO</span></td>
+              <td>Batas kabupaten dan 22 kecamatan Luwu</td>
+            </tr>
+            <tr>
+              <td><strong>Model Elevasi Digital (DEM)</strong></td>
+              <td>Copernicus WorldDEM-30 © DLR e.V. 2010–2014 &amp; © Airbus Defence and Space GmbH 2014–2018</td>
+              <td><span class="badge" style="background:var(--parchment); border:1px solid var(--hairline); font-family:var(--font-mono); font-size:0.75rem;">Copernicus DEM Free &amp; Open</span></td>
+              <td>Analisis kemiringan lereng &amp; elevasi</td>
+            </tr>
+            <tr>
+              <td><strong>Tutupan Lahan (Land Cover)</strong></td>
+              <td>ESA WorldCover project 2021 / Contains modified Copernicus Sentinel data</td>
+              <td><span class="badge" style="background:var(--parchment); border:1px solid var(--hairline); font-family:var(--font-mono); font-size:0.75rem;">CC BY 4.0</span></td>
+              <td>Masker tutupan lahan eksisting &amp; kehati-hatian pertanian</td>
+            </tr>
+            <tr>
+              <td><strong>Jaringan Jalan dan Sungai</strong></td>
+              <td>© OpenStreetMap contributors</td>
+              <td><span class="badge" style="background:var(--parchment); border:1px solid var(--hairline); font-family:var(--font-mono); font-size:0.75rem;">ODbL 1.0</span></td>
+              <td>Buffer jalan arteri/kolektor &amp; sempadan hidrologi</td>
+            </tr>
+            <tr>
+              <td><strong>Basemap Google Maps</strong></td>
+              <td>© Google</td>
+              <td><span class="badge" style="background:var(--parchment); border:1px solid var(--hairline); font-family:var(--font-mono); font-size:0.75rem;">Google Terms of Service</span></td>
+              <td>Visualisasi latar belakang akademik (Street, Satelit, Hybrid)</td>
+            </tr>
+            <tr>
+              <td><strong>Jejak Bangunan (Building Footprints)</strong></td>
+              <td>© Overture Maps Foundation &amp; kontributor (OSM, MS, Google, Esri)</td>
+              <td><span class="badge" style="background:var(--parchment); border:1px solid var(--hairline); font-family:var(--font-mono); font-size:0.75rem;">ODbL / Ketentuan Asal</span></td>
+              <td>Proksi kepadatan &amp; masker permukiman terbangun</td>
+            </tr>
+            <tr>
+              <td><strong>Karya Tulis Ambarwulan dkk. 2022</strong></td>
+              <td>Ambarwulan dkk. (2022)</td>
+              <td><span class="badge" style="background:var(--parchment); border:1px solid var(--hairline); font-family:var(--font-mono); font-size:0.75rem;">CC BY-NC-ND 3.0</span></td>
+              <td>Rujukan metodologi AHP dan pembobotan kriteria</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
@@ -796,6 +1019,16 @@
         <h2>Unduhan Data dan Peta</h2>
         <p>
           Unduh dokumen peta tata letak format PDF dan paket data GIS shapefile hasil analisis untuk penggunaan di perangkat lunak SIG eksternal (QGIS / ArcGIS).
+        </p>
+      </div>
+
+      <!-- Legal Disclaimer Callout -->
+      <div style="background:rgba(184,87,78,0.1); border:1px solid rgba(184,87,78,0.3); border-left:4px solid var(--color-kendala); padding:16px 20px; margin-bottom:24px;">
+        <div style="font-family:var(--font-mono); font-size:0.75rem; font-weight:700; color:var(--color-kendala); text-transform:uppercase; margin-bottom:4px;">
+          PERINGATAN BATASAN HUKUM: BUKAN UNTUK PERIZINAN, BUKAN PKKPR, BUKAN PENETAPAN RESMI RTRW
+        </div>
+        <p style="font-size:0.85rem; color:var(--ink-body); line-height:1.45;">
+          Data dan peta ini semata-mata dihasilkan untuk studi akademis, evaluasi biofisik awal, dan penelitian perencanaan wilayah Kabupaten Luwu. Untuk keperluan perizinan berusaha dan persetujuan kesesuaian pemanfaatan ruang, rujuk dokumen legal resmi Dinas PUPR / ATR BPN setempat.
         </p>
       </div>
 

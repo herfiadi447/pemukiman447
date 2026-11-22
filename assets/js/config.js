@@ -228,19 +228,19 @@ const CONFIG = {
         {
           "kode": 1,
           "nama": "S1 sangat sesuai",
-          "warna_hex": "#19734b",
+          "warna_hex": "#1B6B4A",
           "urutan": 1
         },
         {
           "kode": 2,
           "nama": "S2 sesuai",
-          "warna_hex": "#8ebf71",
+          "warna_hex": "#8CC084",
           "urutan": 2
         },
         {
           "kode": 3,
           "nama": "S3 sesuai bersyarat",
-          "warna_hex": "#f4d16f",
+          "warna_hex": "#F2C95C",
           "urutan": 3
         },
         {
@@ -252,13 +252,13 @@ const CONFIG = {
         {
           "kode": 5,
           "nama": "Kendala",
-          "warna_hex": "#b74643",
+          "warna_hex": "#B8574E",
           "urutan": 5
         },
         {
           "kode": 6,
           "nama": "Tidak dinilai",
-          "warna_hex": "#bebebe",
+          "warna_hex": "#C9C9C4",
           "urutan": 6
         },
         {
