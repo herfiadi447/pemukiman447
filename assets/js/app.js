@@ -5,8 +5,15 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Initialize Map
-  if (window.initMap) {
-    window.initMap();
+  try {
+    if (window.initMap) {
+      window.initMap();
+    }
+  } catch (err) {
+    console.error('Peta gagal dimuat:', err);
+    if (window.showFallback) {
+      window.showFallback('Peta interaktif gagal dimuat. Tampilan fallback:');
+    }
   }
 
   // 2. Load CSV Tables & Statistics

@@ -25,11 +25,24 @@ const cache = {
 const markers = [];
 
 /**
+ * Cek dukungan WebGL (maplibregl.supported() sudah dihapus di MapLibre v4)
+ */
+function webglTersedia() {
+  try {
+    const c = document.createElement('canvas');
+    return !!(window.WebGLRenderingContext &&
+      (c.getContext('webgl2') || c.getContext('webgl') || c.getContext('experimental-webgl')));
+  } catch (e) {
+    return false;
+  }
+}
+
+/**
  * Initialize Primary Map
  */
 function initMap() {
-  if (!maplibregl.supported()) {
-    showFallback('Browser Anda tidak mendukung WebGL untuk menampilkan peta interaktif.');
+  if (!webglTersedia()) {
+    showFallback('WebGL tidak aktif di browser ini, sehingga peta interaktif tidak dapat ditampilkan. Tampilan fallback:');
     return;
   }
 
@@ -1009,6 +1022,7 @@ function showFallback(msg) {
 
 // Export functions to global scope
 window.initMap = initMap;
+window.showFallback = showFallback;
 window.selectKecamatan = selectKecamatan;
 window.setMapMode = setMapMode;
 window.toggleKesesuaianClass = toggleKesesuaianClass;
