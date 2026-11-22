@@ -44,9 +44,12 @@ Basis Desain: Stitch Export (`REDESIGN/` - Cartographic Atlas)
     - [x] Sumber & Lisensi: pernyataan hak cipta dataset asal diubah menjadi format tabel terstruktur
     - [x] Bagian Unduhan: callout peringatan hukum batasan (bukan PKKPR/RTRW)
     - [x] Kartu unduhan data GIS dan peta PDF dengan metadata ukuran dan format
-  - [ ] **2e: Uji Responsif (390px, 768px, 1440px)**
-    - [ ] Penyesuaian panel mengambang jadi bottom sheet pada mobile
-    - [ ] Grid tabel scrollable horizontal di layar sempit
+  - [x] **2e: Uji Responsif (390px, 768px, 1440px)**
+    - [x] Penyesuaian panel mengambang jadi bottom sheet pada mobile (<768px)
+    - [x] Header technical strip disesuaikan untuk layar sempit (390px)
+    - [x] Penyesuaian grid metrik 2-kolom dan 1-kolom pada perangkat genggam
+    - [x] Tabel tabular memiliki container scroll horizontal (`.table-responsive`)
+    - [x] Navigasi mobile dropdown dengan hamburger toggle (`#btn-mobile-nav`)
 
 ---
 *Dokumen ini diperbarui setiap akhir sub-fase.*
