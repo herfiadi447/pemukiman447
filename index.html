@@ -147,84 +147,87 @@
 
       <!-- Map Viewport -->
       <div class="map-wrapper">
-        <!-- North Arrow & Projection Datum Cartouche -->
-        <div class="map-north-cartouche">
-          <div class="compass-rose-box">
-            <span class="compass-u">U</span>
-            <svg class="compass-rose-svg" viewBox="0 0 100 100">
-              <polygon points="50,10 60,45 50,50 40,45" fill="#141B17"/>
-              <polygon points="50,10 50,50 40,45" fill="#707973"/>
-              <polygon points="50,90 60,55 50,50 40,55" fill="#dfebe2" stroke="#141B17" stroke-width="1.5"/>
-              <polygon points="10,50 45,40 50,50 45,60" fill="#dfebe2" stroke="#141B17" stroke-width="1.5"/>
-              <polygon points="90,50 55,40 50,50 55,60" fill="#141B17"/>
-              <circle cx="50" cy="50" r="3" fill="#ffffff" stroke="#141B17" stroke-width="2"/>
-            </svg>
-            <span class="compass-label">UTARA</span>
+        <!-- Floating Left Overlay Stack (Unified Vertical Container) -->
+        <div class="map-left-overlay-stack">
+          <!-- North Arrow & Projection Datum Cartouche -->
+          <div class="map-north-cartouche">
+            <div class="compass-rose-box">
+              <span class="compass-u">U</span>
+              <svg class="compass-rose-svg" viewBox="0 0 100 100">
+                <polygon points="50,10 60,45 50,50 40,45" fill="#141B17"/>
+                <polygon points="50,10 50,50 40,45" fill="#707973"/>
+                <polygon points="50,90 60,55 50,50 40,55" fill="#dfebe2" stroke="#141B17" stroke-width="1.5"/>
+                <polygon points="10,50 45,40 50,50 45,60" fill="#dfebe2" stroke="#141B17" stroke-width="1.5"/>
+                <polygon points="90,50 55,40 50,50 55,60" fill="#141B17"/>
+                <circle cx="50" cy="50" r="3" fill="#ffffff" stroke="#141B17" stroke-width="2"/>
+              </svg>
+              <span class="compass-label">UTARA</span>
+            </div>
+            <div class="cartouche-divider"></div>
+            <div class="cartouche-info">
+              <span class="cartouche-title">SISTEM PROYEKSI</span>
+              <span class="cartouche-body">Transverse Mercator</span>
+              <div class="cartouche-sub">WGS 84 • ZONE 51S</div>
+            </div>
           </div>
-          <div class="cartouche-divider"></div>
-          <div class="cartouche-info">
-            <span class="cartouche-title">SISTEM PROYEKSI</span>
-            <span class="cartouche-body">Transverse Mercator</span>
-            <div class="cartouche-sub">WGS 84 • ZONE 51S</div>
-          </div>
-        </div>
 
-        <!-- Floating Left Panel: 4 Key Figures (Neraca Kesesuaian Lahan) -->
-        <div id="map-left-key-card" class="map-left-panel">
-          <div class="left-panel-header">
-            <div>
-              <span class="left-panel-badge">REKAPITULASI BIOFISIK</span>
-              <h3 class="left-panel-title">Neraca Kesesuaian</h3>
-              <p class="left-panel-sub">Kabupaten Luwu • Analisis Makro 2024</p>
+          <!-- Floating Left Panel: 4 Key Figures (Neraca Kesesuaian Lahan) -->
+          <div id="map-left-key-card" class="map-left-panel">
+            <div class="left-panel-header">
+              <div>
+                <span class="left-panel-badge">REKAPITULASI BIOFISIK</span>
+                <h3 class="left-panel-title">Neraca Kesesuaian</h3>
+                <p class="left-panel-sub">Kabupaten Luwu • Analisis Makro 2024</p>
+              </div>
+              <button id="btn-toggle-left-panel" class="btn-toggle" style="padding:2px 8px; font-size:12px;">−</button>
             </div>
-            <button id="btn-toggle-left-panel" class="btn-toggle" style="padding:2px 8px; font-size:12px;">−</button>
-          </div>
-          <div id="map-left-panel-body" class="map-left-body">
-            <!-- Proportional Horizontal Bar -->
-            <div class="suitability-rule-bar">
-              <div class="suitability-rule-track">
-                <div style="width:7.0%; background-color:#1B6B4A;" title="S1: 7,0%"></div>
-                <div style="width:28.7%; background-color:#8CC084;" title="S2: 28,7%"></div>
-                <div style="width:23.4%; background-color:#F2C95C;" title="S3: 23,4%"></div>
-                <div style="width:31.3%; background-color:#B8574E;" title="Kendala: 31,3%"></div>
-                <div style="width:9.6%; background-color:#C9C9C4;" title="Tidak Dinilai: 9,6%"></div>
-              </div>
-              <div class="suitability-rule-labels">
-                <span>S1: 7%</span>
-                <span>S2: 29%</span>
-                <span>S3: 23%</span>
-                <span>N: 31%</span>
-              </div>
-            </div>
-            <!-- 4 Key Stat Items -->
-            <div class="left-stat-list">
-              <div class="left-stat-item">
-                <div class="left-stat-row">
-                  <span class="left-stat-name">Total Wilayah</span>
-                  <span class="left-stat-val">289.842 ha</span>
+            <div id="map-left-panel-body" class="map-left-body">
+              <!-- Proportional Horizontal Bar -->
+              <div class="suitability-rule-bar">
+                <div class="suitability-rule-track">
+                  <div style="width:7.0%; background-color:#1B6B4A;" title="S1: 7,0%"></div>
+                  <div style="width:28.7%; background-color:#8CC084;" title="S2: 28,7%"></div>
+                  <div style="width:23.4%; background-color:#F2C95C;" title="S3: 23,4%"></div>
+                  <div style="width:31.3%; background-color:#B8574E;" title="Kendala: 31,3%"></div>
+                  <div style="width:9.6%; background-color:#C9C9C4;" title="Tidak Dinilai: 9,6%"></div>
                 </div>
-                <p class="left-stat-desc">100% agregat wilayah kajian Kabupaten Luwu</p>
-              </div>
-              <div class="left-stat-item">
-                <div class="left-stat-row">
-                  <span class="left-stat-name"><span class="swatch-dot" style="background:#1B6B4A;"></span> S1 (Sangat Sesuai)</span>
-                  <span class="left-stat-val" style="color:#1B6B4A;">20.339 ha</span>
+                <div class="suitability-rule-labels">
+                  <span>S1: 7%</span>
+                  <span>S2: 29%</span>
+                  <span>S3: 23%</span>
+                  <span>N: 31%</span>
                 </div>
-                <p class="left-stat-desc">7,0% — Dataran aluvial stabil &amp; koridor jalan</p>
               </div>
-              <div class="left-stat-item">
-                <div class="left-stat-row">
-                  <span class="left-stat-name"><span class="swatch-dot" style="background:#8CC084;"></span> S2 (Cukup Sesuai)</span>
-                  <span class="left-stat-val" style="color:#566416;">83.229 ha</span>
+              <!-- 4 Key Stat Items -->
+              <div class="left-stat-list">
+                <div class="left-stat-item">
+                  <div class="left-stat-row">
+                    <span class="left-stat-name">Total Wilayah</span>
+                    <span class="left-stat-val">289.842 ha</span>
+                  </div>
+                  <p class="left-stat-desc">100% agregat wilayah kajian Kabupaten Luwu</p>
                 </div>
-                <p class="left-stat-desc">28,7% — Kelerengan 2–8%, drainase sedang</p>
-              </div>
-              <div class="left-stat-item">
-                <div class="left-stat-row">
-                  <span class="left-stat-name"><span class="swatch-dot" style="background:#B8574E;"></span> Kendala Fisik</span>
-                  <span class="left-stat-val" style="color:#B8574E;">90.610 ha</span>
+                <div class="left-stat-item">
+                  <div class="left-stat-row">
+                    <span class="left-stat-name"><span class="swatch-dot" style="background:#1B6B4A;"></span> S1 (Sangat Sesuai)</span>
+                    <span class="left-stat-val" style="color:#1B6B4A;">20.339 ha</span>
+                  </div>
+                  <p class="left-stat-desc">7,0% — Dataran aluvial stabil &amp; koridor jalan</p>
                 </div>
-                <p class="left-stat-desc">31,3% — Lereng curam &gt;45%, sempadan sungai</p>
+                <div class="left-stat-item">
+                  <div class="left-stat-row">
+                    <span class="left-stat-name"><span class="swatch-dot" style="background:#8CC084;"></span> S2 (Cukup Sesuai)</span>
+                    <span class="left-stat-val" style="color:#566416;">83.229 ha</span>
+                  </div>
+                  <p class="left-stat-desc">28,7% — Kelerengan 2–8%, drainase sedang</p>
+                </div>
+                <div class="left-stat-item">
+                  <div class="left-stat-row">
+                    <span class="left-stat-name"><span class="swatch-dot" style="background:#B8574E;"></span> Kendala Fisik</span>
+                    <span class="left-stat-val" style="color:#B8574E;">90.610 ha</span>
+                  </div>
+                  <p class="left-stat-desc">31,3% — Lereng curam &gt;45%, sempadan sungai</p>
+                </div>
               </div>
             </div>
           </div>

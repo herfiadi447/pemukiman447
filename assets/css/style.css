@@ -23,12 +23,13 @@
   --color-kendala: #B8574E;
   --color-td:      #C9C9C4;
   --color-pertanian: #c026d3;
+  --header-h:      96px;
   --font-serif: 'Noto Serif', Georgia, serif;
   --font-sans:  'IBM Plex Sans', Arial, sans-serif;
   --font-mono:  'JetBrains Mono', monospace;
 }
 
-/* ============ RESET ============ */
+/* ============ RESET & BASE ============ */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -37,6 +38,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h);
   font-size: 16px;
 }
 
@@ -48,50 +50,45 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ============ DISCLAIMER TOP BANNER ============ */
-.disclaimer-top {
-  background: var(--canvas);
-  border-bottom: 2px solid var(--grid-line);
-  color: var(--ink-body);
-  font-size: 0.775rem;
-  font-weight: 600;
-  font-family: var(--font-mono);
-  padding: 7px 16px;
-  text-align: center;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+/* Section scroll margins */
+#hero, #peta, #statistik, #sensitivitas, #metode, #sumber, #unduhan {
+  scroll-margin-top: var(--header-h);
 }
 
-/* ============ HEADER & NAV ============ */
+/* ============ HEADER & NAV (INSTITUTIONAL ATLAS) ============ */
 header {
   background: var(--paper);
   border-bottom: 1px solid var(--hairline);
   position: sticky;
   top: 0;
   z-index: 100;
+  width: 100%;
 }
 
 .nav-container {
   max-width: 1440px;
+  height: 64px;
   margin: 0 auto;
-  padding: 10px 24px;
+  padding: 0 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
+  box-sizing: border-box;
 }
 
 .brand-wrapper {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   text-decoration: none;
   color: inherit;
+  flex-shrink: 0;
 }
 
 .brand-icon {
-  width: 38px;
-  height: 38px;
+  width: 36px;
+  height: 36px;
   background: var(--canvas);
   border: 1px solid var(--accent);
   display: flex;
@@ -99,6 +96,13 @@ header {
   justify-content: center;
   color: var(--accent);
   border-radius: 0;
+  flex-shrink: 0;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .brand-text h1 {
@@ -106,36 +110,56 @@ header {
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--ink-primary);
-  line-height: 1.15;
-  letter-spacing: 0.05em;
+  line-height: 1.25;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
 }
 
 .brand-text p {
   font-size: 0.65rem;
   color: var(--ink-muted);
   font-family: var(--font-mono);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 320px;
+}
+
+nav#main-nav {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 nav ul {
   display: flex;
   list-style: none;
-  gap: 6px;
+  gap: 4px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap;
 }
 
 nav a {
   text-decoration: none;
   color: var(--ink-muted);
   font-weight: 500;
-  font-size: 0.835rem;
-  padding: 8px 12px;
+  font-size: 0.825rem;
+  padding: 6px 10px;
   border-bottom: 2px solid transparent;
   transition: color 0.15s, border-color 0.15s;
   border-radius: 0;
   letter-spacing: 0.02em;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
 }
 
 nav a:hover, nav a.active {
@@ -148,42 +172,61 @@ nav a:hover, nav a.active {
   display: flex;
   align-items: center;
   border-left: 1px solid var(--hairline);
-  padding-left: 16px;
+  padding-left: 14px;
   font-family: var(--font-mono);
   font-size: 0.72rem;
   color: var(--ink-muted);
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .header-technical-strip {
   background: var(--parchment);
   border-top: 1px solid var(--hairline);
-  padding: 5px 24px;
+  height: 32px;
+  padding: 0 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 0.72rem;
   color: var(--ink-body);
   font-family: var(--font-mono);
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .header-technical-strip .strip-left {
   display: flex;
   align-items: center;
   gap: 6px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex: 1;
+  margin-right: 16px;
+}
+
+.header-technical-strip .strip-left span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .header-technical-strip .strip-icon {
   font-size: 14px;
   color: #7D8C43;
+  flex-shrink: 0;
 }
 
 .header-technical-strip .strip-right {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   color: var(--ink-muted);
   font-size: 0.68rem;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .btn-mobile-menu {
@@ -191,9 +234,10 @@ nav a:hover, nav a.active {
   background: var(--paper);
   border: 1px solid var(--hairline);
   border-radius: 0;
-  padding: 8px 10px;
+  padding: 6px 10px;
   cursor: pointer;
   color: var(--ink-body);
+  font-size: 1.1rem;
 }
 
 /* ============ HERO SECTION ============ */
@@ -587,15 +631,33 @@ section {
   display: block;
 }
 
+/* ============ MAP LEFT OVERLAY STACK (UNIFIED CONTAINER) ============ */
+.map-left-overlay-stack {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: calc(100% - 28px);
+  overflow-y: auto;
+  z-index: 25;
+  pointer-events: none;
+  width: 320px;
+}
+
+.map-left-overlay-stack > * {
+  pointer-events: auto;
+}
+
 /* Map Top-Left Cartouche */
 .map-north-cartouche {
-  position: absolute;
-  top: 16px;
-  left: 16px;
+  position: static;
+  width: 100%;
+  box-sizing: border-box;
   background: var(--paper);
   border: 1px solid var(--hairline);
   padding: 8px 12px;
-  z-index: 25;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -663,13 +725,11 @@ section {
 
 /* Map Left Panel (Neraca Kesesuaian) */
 .map-left-panel {
-  position: absolute;
-  top: 96px;
-  left: 16px;
-  width: 320px;
+  position: static;
+  width: 100%;
+  box-sizing: border-box;
   background: var(--paper);
   border: 1px solid var(--hairline);
-  z-index: 25;
   display: flex;
   flex-direction: column;
   box-shadow: 2px 2px 0px var(--grid-line);
@@ -972,29 +1032,29 @@ section {
   margin-top: 4px;
 }
 
-/* ============ KECAMATAN LABELS ============ */
+/* ============ KECAMATAN LABELS (CLEAN CARTOGRAPHIC TOPONYMY) ============ */
 .kecamatan-marker-label {
-  background: var(--paper);
-  border: 1px solid var(--ink-muted);
-  border-radius: 0;
-  padding: 2px 6px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
   font-size: 11px;
   font-weight: 700;
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
   color: var(--ink-primary);
   white-space: nowrap;
-  box-shadow: 2px 2px 0px var(--grid-line);
   cursor: pointer;
   pointer-events: auto;
   transform: translate(-50%, -50%);
-  transition: all 0.1s;
+  text-shadow: 1px 1px 0 #F5F2EA, -1px -1px 0 #F5F2EA, 1px -1px 0 #F5F2EA, -1px 1px 0 #F5F2EA, 0 1px 0 #F5F2EA, 0 -1px 0 #F5F2EA, 1px 0 0 #F5F2EA, -1px 0 0 #F5F2EA;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: transform 0.1s, color 0.1s;
 }
 
 .kecamatan-marker-label:hover {
-  background: var(--accent);
-  color: var(--paper);
-  border-color: var(--accent);
-  transform: translate(-50%, -50%) scale(1.08);
+  color: var(--accent);
+  transform: translate(-50%, -50%) scale(1.1);
   z-index: 10;
 }
 
@@ -1404,12 +1464,48 @@ footer {
   font-family: var(--font-mono);
 }
 
-/* ============ RESPONSIVE DESIGN (390px, 768px, 1440px) ============ */
+/* ============ RESPONSIVE DESIGN (390px, 768px, 1024px, 1280px, 1440px) ============ */
+@media (max-width: 1439px) {
+  /* Default collapse left summary body on medium/smaller desktop to maximize map view */
+  #map-left-panel-body {
+    display: none;
+  }
+}
+
+@media (max-width: 1280px) {
+  .nav-extra-coords {
+    display: none;
+  }
+}
+
 @media (max-width: 1024px) {
   .nav-extra-coords {
     display: none;
   }
-  .map-left-panel {
+  .header-technical-strip .strip-right {
+    display: none;
+  }
+  nav ul {
+    display: none;
+  }
+  .btn-mobile-menu {
+    display: block;
+  }
+  nav.mobile-active ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: var(--paper);
+    padding: 14px 20px;
+    border-bottom: 2px solid var(--hairline);
+    z-index: 200;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .map-left-overlay-stack {
     width: 280px;
   }
   .map-floating-panel {
@@ -1424,13 +1520,13 @@ footer {
   .footer-top { grid-template-columns: 1fr; gap: 24px; }
   
   .header-technical-strip {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-    padding: 6px 16px;
+    height: auto;
+    min-height: 28px;
+    padding: 4px 16px;
+    font-size: 0.68rem;
   }
-  .header-technical-strip .strip-right {
-    font-size: 0.65rem;
+  .header-technical-strip .strip-left {
+    margin-right: 0;
   }
 
   .map-toolbar {
@@ -1452,11 +1548,17 @@ footer {
   }
   
   /* On mobile, collapse left card and place floating panel at bottom */
-  .map-north-cartouche {
+  .map-left-overlay-stack {
     top: 10px;
     left: 10px;
+    width: auto;
+    max-width: 240px;
+  }
+
+  .map-north-cartouche {
     padding: 4px 8px;
     gap: 8px;
+    width: auto;
   }
   .cartouche-info { display: none; }
   .cartouche-divider { display: none; }
@@ -1485,22 +1587,6 @@ footer {
     border-bottom: none;
     border-top: 2px solid var(--hairline);
     box-shadow: 0 -2px 6px rgba(0,0,0,0.06);
-  }
-
-  nav ul { display: none; }
-  .btn-mobile-menu { display: block; }
-  nav.mobile-active ul {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: var(--paper);
-    padding: 14px 20px;
-    border-bottom: 2px solid var(--hairline);
-    z-index: 200;
-    gap: 8px;
   }
 }
 

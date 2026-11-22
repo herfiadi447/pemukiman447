@@ -249,6 +249,13 @@ function setupUIInteractions() {
     btnMobile.addEventListener('click', () => {
       nav.classList.toggle('mobile-active');
     });
+
+    // Close mobile nav when clicking any link
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('mobile-active');
+      });
+    });
   }
 
   // Accordion Toggle
@@ -281,6 +288,10 @@ function setupUIInteractions() {
   const btnToggleLeftPanel = document.getElementById('btn-toggle-left-panel');
   const leftPanelBody = document.getElementById('map-left-panel-body');
   if (btnToggleLeftPanel && leftPanelBody) {
+    if (window.innerWidth < 1440) {
+      leftPanelBody.style.display = 'none';
+      btnToggleLeftPanel.textContent = '+';
+    }
     btnToggleLeftPanel.addEventListener('click', () => {
       const isCollapsed = leftPanelBody.style.display === 'none';
       leftPanelBody.style.display = isCollapsed ? 'flex' : 'none';

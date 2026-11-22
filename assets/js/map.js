@@ -130,7 +130,7 @@ function initMap() {
     attributionControl: false
   });
 
-  map.addControl(new maplibregl.NavigationControl({ showCompass: true }), 'top-left');
+  map.addControl(new maplibregl.NavigationControl({ showCompass: true }), 'bottom-left');
   map.addControl(new maplibregl.ScaleControl({ maxWidth: 150, unit: 'metric' }), 'bottom-left');
 
   map.on('load', async () => {
@@ -141,7 +141,8 @@ function initMap() {
     console.warn('MapLibre event error:', e);
   });
 
-  // Watch zoom level for bangunan layer
+  // Watch zoom level for kecamatan label density and bangunan layer
+  map.on('zoom', updateKecamatanLabelVisibility);
   map.on('zoomend', () => {
     handleZoomBuildingCheck();
   });
@@ -394,6 +395,21 @@ async function setupInitialData() {
 }
 
 /**
+ * Update visibility of kecamatan labels based on map zoom
+ * (Show only at zoom >= 9.8 to prevent overcrowding at county level)
+ */
+function updateKecamatanLabelVisibility() {
+  if (!map) return;
+  const isZoomedIn = map.getZoom() >= 9.8;
+  markers.forEach(m => {
+    const el = m.getElement();
+    if (el) {
+      el.style.display = isZoomedIn ? 'block' : 'none';
+    }
+  });
+}
+
+/**
  * Creates accessible, crisp DOM markers for kecamatan labels
  */
 function createKecamatanLabels(pusatGeoJSON) {
@@ -424,6 +440,9 @@ function createKecamatanLabels(pusatGeoJSON) {
 
     markers.push(marker);
   }
+
+  // Update initial label visibility according to current zoom
+  updateKecamatanLabelVisibility();
 }
 
 /**

@@ -59,5 +59,13 @@ Basis Desain: Stitch Export (`REDESIGN/` - Cartographic Atlas)
   - [x] Panel statistik, matriks sensitivitas, accordion metodologi, dan kartu unduhan teruji 100%
   - [x] Tampilan mobile (390px) responsif dan stabil tanpa layout breaking
 
+- [x] **Fase 4: Perbaikan Layout, Stacking Overlay & Tipografi Kartografi**
+  - [x] **Header & Nav Bar Rapi**: Tinggi fixed 64px, menu 1 baris tanpa wrapping tidak rata, ellipsis subjudul, WGS 84 disembunyikan di <1280px, hamburger menu responsif di <1024px.
+  - [x] **Pemisahan Toolbar Peta dari Sticky Header**: Implementasi `--header-h: 96px` dengan `scroll-padding-top` dan `scroll-margin-top` pada semua section anchor sehingga toolbar kontrol peta tampil utuh dan bebas dari tumpukan header.
+  - [x] **Penataan Overlay Kiri Peta**: Penyatuan Cartouche Arah & Kartu Neraca Kesesuaian ke dalam kontainer vertikal tunggal `.map-left-overlay-stack`. Default collapse (`+`/`−`) pada layar <1440px.
+  - [x] **Relokasi Kontrol Navigasi MapLibre**: Dipindahkan ke pojok kiri bawah (`bottom-left`) sehingga bebas dari tabrakan dengan kartu overlay kiri.
+  - [x] **Pengurangan Kepadatan Label Kecamatan**: Label toponimi disembunyikan di zoom level kabupaten (< 9.8), dan ditampilkan dengan gaya toponimi kartografis bersih ber-halo perkamen tipis (`#F5F2EA`) saat diperbesar (zoom in) atau kecamatan difokuskan.
+  - [x] **Verifikasi Browser Multi-Resolusi**: Uji visual dan fungsional di 1920px, 1440px, 1280px, dan mobile 390px menghasilkan 0 JavaScript error.
+
 ---
 *Dokumen ini diperbarui setiap akhir sub-fase.*
