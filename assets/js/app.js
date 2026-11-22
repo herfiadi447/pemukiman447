@@ -277,6 +277,37 @@ function setupUIInteractions() {
     });
   }
 
+  // Floating map left panel collapse toggle
+  const btnToggleLeftPanel = document.getElementById('btn-toggle-left-panel');
+  const leftPanelBody = document.getElementById('map-left-panel-body');
+  if (btnToggleLeftPanel && leftPanelBody) {
+    btnToggleLeftPanel.addEventListener('click', () => {
+      const isCollapsed = leftPanelBody.style.display === 'none';
+      leftPanelBody.style.display = isCollapsed ? 'flex' : 'none';
+      btnToggleLeftPanel.textContent = isCollapsed ? '−' : '+';
+    });
+  }
+
+  // Floating map right panel tab switching
+  const tabBtns = document.querySelectorAll('.panel-tab-btn');
+  const tabContents = document.querySelectorAll('.panel-tab-content');
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabBtns.forEach(b => b.classList.remove('active'));
+      tabContents.forEach(c => {
+        c.classList.remove('active');
+        c.style.display = 'none';
+      });
+      btn.classList.add('active');
+      const targetId = btn.getAttribute('data-tab');
+      const target = document.getElementById(targetId);
+      if (target) {
+        target.classList.add('active');
+        target.style.display = 'block';
+      }
+    });
+  });
+
   // Basemap button toggle for click / touch
   const btnBasemap = document.getElementById('btn-toggle-basemap');
   const boxBasemap = document.getElementById('basemap-control-box');

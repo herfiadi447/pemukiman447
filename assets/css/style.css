@@ -518,30 +518,319 @@ section {
   position: absolute;
   top: 14px;
   right: 14px;
-  width: 320px;
+  width: 360px;
   max-height: calc(100% - 28px);
-  background: var(--parchment);
+  background: var(--paper);
   border: 1px solid var(--hairline);
   border-radius: 0;
   z-index: 30;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  box-shadow: 2px 2px 0px var(--grid-line);
 }
 
 .panel-header {
-  padding: 9px 12px;
-  background: var(--paper);
+  padding: 10px 14px;
+  background: var(--parchment);
   border-bottom: 1px solid var(--hairline);
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-weight: 700;
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   color: var(--ink-primary);
   text-transform: uppercase;
   letter-spacing: 0.06em;
   font-family: var(--font-sans);
+}
+
+.panel-tab-bar {
+  display: flex;
+  background: var(--canvas);
+  border-bottom: 1px solid var(--hairline);
+}
+
+.panel-tab-btn {
+  flex: 1;
+  padding: 8px 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--ink-muted);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.panel-tab-btn:hover {
+  color: var(--accent);
+  background: var(--paper);
+}
+
+.panel-tab-btn.active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+  background: var(--paper);
+  font-weight: 700;
+}
+
+.panel-tab-content {
+  display: none;
+}
+
+.panel-tab-content.active {
+  display: block;
+}
+
+/* Map Top-Left Cartouche */
+.map-north-cartouche {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: var(--paper);
+  border: 1px solid var(--hairline);
+  padding: 8px 12px;
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 2px 2px 0px var(--grid-line);
+}
+
+.compass-rose-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.compass-u {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 0.85rem;
+  line-height: 1;
+  color: var(--ink-primary);
+}
+
+.compass-rose-svg {
+  width: 28px;
+  height: 28px;
+}
+
+.compass-label {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--ink-muted);
+  letter-spacing: 0.05em;
+}
+
+.cartouche-divider {
+  width: 1px;
+  height: 38px;
+  background: var(--hairline);
+}
+
+.cartouche-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.cartouche-title {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cartouche-body {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink-primary);
+}
+
+.cartouche-sub {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--ink-muted);
+}
+
+/* Map Left Panel (Neraca Kesesuaian) */
+.map-left-panel {
+  position: absolute;
+  top: 96px;
+  left: 16px;
+  width: 320px;
+  background: var(--paper);
+  border: 1px solid var(--hairline);
+  z-index: 25;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 0px var(--grid-line);
+}
+
+.left-panel-header {
+  padding: 10px 14px;
+  background: var(--parchment);
+  border-bottom: 1px solid var(--hairline);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.left-panel-badge {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #7D8C43;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.left-panel-title {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink-primary);
+  margin-top: 2px;
+}
+
+.left-panel-sub {
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+  font-family: var(--font-mono);
+}
+
+.map-left-body {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.suitability-rule-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.suitability-rule-track {
+  display: flex;
+  height: 9px;
+  width: 100%;
+  background: var(--canvas);
+  border: 1px solid var(--hairline);
+  overflow: hidden;
+}
+
+.suitability-rule-labels {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--ink-muted);
+}
+
+.left-stat-list {
+  display: flex;
+  flex-direction: column;
+  divide-y: 1px solid var(--hairline);
+  border-top: 1px solid var(--hairline);
+}
+
+.left-stat-item {
+  padding: 7px 0;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.left-stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.left-stat-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ink-primary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.left-stat-val {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.left-stat-desc {
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+  margin-top: 2px;
+  line-height: 1.35;
+}
+
+.swatch-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+}
+
+/* Map Scale Bar */
+.map-scale-bar-box {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: var(--paper);
+  border: 1px solid var(--hairline);
+  padding: 8px 12px;
+  z-index: 25;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  box-shadow: 2px 2px 0px var(--grid-line);
+}
+
+.scale-bar-header {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--ink-primary);
+}
+
+.scale-bar-segments {
+  display: flex;
+  height: 6px;
+  width: 150px;
+  border: 1px solid var(--ink-primary);
+}
+
+.scale-seg-black {
+  flex: 1;
+  background: var(--ink-primary);
+}
+
+.scale-seg-white {
+  flex: 1;
+  background: var(--paper);
+}
+
+.scale-bar-footer {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--ink-muted);
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .panel-body {

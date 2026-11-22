@@ -32,12 +32,13 @@ Basis Desain: Stitch Export (`REDESIGN/` - Cartographic Atlas)
     - [x] Strip peringatan teknis kartografi (bukan RTRW)
     - [x] Section headers bergaya plate kartografis dengan registration mark `+`
     - [x] Nav link aktif state
-  - [ ] **2c: Peta Interaktif + Panel Mengambang + Statistik + Sensitivitas**
-    - [ ] Layout peta full-bleed dengan border hairline & koordinat collar
-    - [ ] Kartu angka kunci (4 matriks utama)
-    - [ ] Panel kanan mengambang bertab (Legenda, Kontrol Lapisan, Basemap)
-    - [ ] Desain ulang bagian Statistik (grid metrik, bar horizontal proporsional, tabel tabular rapi)
-    - [ ] Desain ulang bagian Sensitivitas (callout box uji OAT, bar shift kelas, matriks skenario)
+  - [x] **2c: Peta Interaktif + Panel Mengambang + Statistik + Sensitivitas**
+    - [x] Layout peta dengan North Arrow cartouche & datum WGS84 / Zone 51S
+    - [x] Kartu angka kunci kiri melayang ("Neraca Kesesuaian Lahan" dengan stacked rule bar)
+    - [x] Panel kanan mengambang bertab (Lapisan, Legenda, Basemap)
+    - [x] Alternating graphic scale bar 1:50.000 di pojok kanan bawah
+    - [x] Panel Statistik: 4 blok metrik kunci, diagram batang luas, tabel tabular, validasi box
+    - [x] Panel Sensitivitas: callout box metode OAT dengan 2 blok figur tegas (bobot vs batas kelas)
   - [ ] **2d: Sumber, Lisensi & Unduhan + Metodologi**
     - [ ] Format tabel untuk lisensi data dan atribusi
     - [ ] Kartu unduhan dengan metadata ukuran dan format
