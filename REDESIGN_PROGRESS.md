@@ -51,5 +51,13 @@ Basis Desain: Stitch Export (`REDESIGN/` - Cartographic Atlas)
     - [x] Tabel tabular memiliki container scroll horizontal (`.table-responsive`)
     - [x] Navigasi mobile dropdown dengan hamburger toggle (`#btn-mobile-nav`)
 
+- [x] **Fase 3: Verifikasi Komprehensif & Perbaikan Bug**
+  - [x] Verifikasi browser headless via subagent pada `http://localhost:8088/`
+  - [x] Peta MapLibre GL 4.7.1 termuat sempurna dengan 4 basemap (Google Street, OSM, Google Satelit, Google Hybrid)
+  - [x] Perbaikan error Mode Swipe: `mapCompare._update()` diganti dengan `compA.resize()` & `mapB.resize()`
+  - [x] Dropdown kecamatan, reset zoom, slider opasitas, dan interaksi legenda teruji 100%
+  - [x] Panel statistik, matriks sensitivitas, accordion metodologi, dan kartu unduhan teruji 100%
+  - [x] Tampilan mobile (390px) responsif dan stabil tanpa layout breaking
+
 ---
 *Dokumen ini diperbarui setiap akhir sub-fase.*

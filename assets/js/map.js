@@ -947,7 +947,8 @@ async function setMapMode(mode) {
     if (!mapB) {
       initMapCompare();
     } else {
-      mapCompare._update();
+      if (compA) compA.resize();
+      if (mapB) mapB.resize();
     }
   } else {
     btnSwipe.classList.remove('active');
