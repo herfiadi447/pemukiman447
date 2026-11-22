@@ -4,11 +4,72 @@
  */
 
 let map = null;
+let compA = null;
 let mapB = null;
 let mapCompare = null;
+let currentBasemap = 'peta-jalan';
 let activeKesesuaianCodes = [1, 2, 3, 4, 5, 6];
 let activeKemiringanCodes = [1, 2, 3, 4];
 let activeTutupanCodes = [10, 20, 30, 40, 50, 60, 80, 90, 95];
+
+// Basemap Definitions
+const BASEMAP_SOURCES = {
+  'source-basemap-google-street': {
+    type: 'raster',
+    tiles: ['https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}'],
+    tileSize: 256,
+    maxzoom: 20,
+    attribution: '© Google'
+  },
+  'source-basemap-peta-jalan': {
+    type: 'raster',
+    tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
+    tileSize: 256,
+    maxzoom: 19,
+    attribution: '© OpenStreetMap contributors'
+  },
+  'source-basemap-google-satelit': {
+    type: 'raster',
+    tiles: ['https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}'],
+    tileSize: 256,
+    maxzoom: 20,
+    attribution: '© Google'
+  },
+  'source-basemap-google-hybrid': {
+    type: 'raster',
+    tiles: ['https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}'],
+    tileSize: 256,
+    maxzoom: 20,
+    attribution: '© Google'
+  }
+};
+
+const BASEMAP_LAYERS = [
+  {
+    id: 'layer-basemap-google-street',
+    type: 'raster',
+    source: 'source-basemap-google-street',
+    layout: { visibility: 'none' }
+  },
+  {
+    id: 'layer-basemap-peta-jalan',
+    type: 'raster',
+    source: 'source-basemap-peta-jalan',
+    layout: { visibility: 'visible' }
+  },
+  {
+    id: 'layer-basemap-google-satelit',
+    type: 'raster',
+    source: 'source-basemap-google-satelit',
+    layout: { visibility: 'none' }
+  },
+  {
+    id: 'layer-basemap-google-hybrid',
+    type: 'raster',
+    source: 'source-basemap-google-hybrid',
+    layout: { visibility: 'none' }
+  }
+];
 
 // Data Cache
 const cache = {
@@ -48,7 +109,7 @@ function initMap() {
 
   const mapStyle = {
     version: 8,
-    sources: {},
+    sources: { ...BASEMAP_SOURCES },
     layers: [
       {
         id: 'bg-layer',
@@ -56,7 +117,8 @@ function initMap() {
         paint: {
           'background-color': '#f8fafc'
         }
-      }
+      },
+      ...BASEMAP_LAYERS
     ]
   };
 
@@ -899,21 +961,25 @@ async function setMapMode(mode) {
 }
 
 function initMapCompare() {
-  const mapStyle = {
+  const getCompareStyle = (bgId) => ({
     version: 8,
-    sources: {},
+    sources: { ...BASEMAP_SOURCES },
     layers: [
       {
-        id: 'bg-layer-b',
+        id: bgId,
         type: 'background',
         paint: { 'background-color': '#f8fafc' }
-      }
+      },
+      ...BASEMAP_LAYERS.map(l => ({
+        ...l,
+        layout: { visibility: l.id === ('layer-basemap-' + currentBasemap) ? 'visible' : 'none' }
+      }))
     ]
-  };
+  });
 
-  const compA = new maplibregl.Map({
+  compA = new maplibregl.Map({
     container: 'comp-map-a',
-    style: mapStyle,
+    style: getCompareStyle('bg-layer-a'),
     bounds: CONFIG.bounds,
     fitBoundsOptions: { padding: 30 },
     attributionControl: false
@@ -921,7 +987,7 @@ function initMapCompare() {
 
   mapB = new maplibregl.Map({
     container: 'comp-map-b',
-    style: mapStyle,
+    style: getCompareStyle('bg-layer-b'),
     bounds: CONFIG.bounds,
     fitBoundsOptions: { padding: 30 },
     attributionControl: false
@@ -1020,8 +1086,27 @@ function showFallback(msg) {
   }
 }
 
+/**
+ * Switch active basemap across main map and swipe maps
+ */
+function setBasemap(basemapKey) {
+  currentBasemap = basemapKey;
+  const allKeys = ['google-street', 'peta-jalan', 'google-satelit', 'google-hybrid'];
+
+  [map, compA, mapB].forEach(m => {
+    if (!m) return;
+    allKeys.forEach(k => {
+      const lid = 'layer-basemap-' + k;
+      if (m.getLayer(lid)) {
+        m.setLayoutProperty(lid, 'visibility', k === basemapKey ? 'visible' : 'none');
+      }
+    });
+  });
+}
+
 // Export functions to global scope
 window.initMap = initMap;
+window.setBasemap = setBasemap;
 window.showFallback = showFallback;
 window.selectKecamatan = selectKecamatan;
 window.setMapMode = setMapMode;

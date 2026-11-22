@@ -374,6 +374,29 @@
               </div>
             </div>
 
+            <!-- Basemap Selection -->
+            <div style="border-top:1px solid #bfc9c1; padding-top:10px; margin-top:4px;">
+              <div class="layer-group-title">Basemap</div>
+              <div style="display:flex; flex-direction:column; gap:5px;">
+                <label style="display:flex; align-items:center; gap:7px; cursor:pointer; font-size:0.82rem; color:#1f2a24;">
+                  <input type="radio" name="basemap-select" value="google-street" style="accent-color:#004730;">
+                  <span>Google Street</span>
+                </label>
+                <label style="display:flex; align-items:center; gap:7px; cursor:pointer; font-size:0.82rem; color:#1f2a24;">
+                  <input type="radio" name="basemap-select" value="peta-jalan" checked style="accent-color:#004730;">
+                  <span>Peta Jalan (OSM)</span>
+                </label>
+                <label style="display:flex; align-items:center; gap:7px; cursor:pointer; font-size:0.82rem; color:#1f2a24;">
+                  <input type="radio" name="basemap-select" value="google-satelit" style="accent-color:#004730;">
+                  <span>Google Satelit</span>
+                </label>
+                <label style="display:flex; align-items:center; gap:7px; cursor:pointer; font-size:0.82rem; color:#1f2a24;">
+                  <input type="radio" name="basemap-select" value="google-hybrid" style="accent-color:#004730;">
+                  <span>Google Hybrid</span>
+                </label>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -771,6 +794,12 @@
           <div class="stat-label">Jaringan Jalan dan Sungai</div>
           <p style="font-size:0.85rem; color:#334155; margin-top:6px;">
             © OpenStreetMap contributors. Lisensi: <strong>Open Database License (ODbL 1.0)</strong>.
+          </p>
+        </div>
+        <div class="stat-card-hero">
+          <div class="stat-label">Basemap Google Maps</div>
+          <p style="font-size:0.85rem; color:#334155; margin-top:6px;">
+            Basemap Google Maps (Street, Satelit, Hybrid): © Google — Digunakan untuk visualisasi akademik.
           </p>
         </div>
         <div class="stat-card-hero">
