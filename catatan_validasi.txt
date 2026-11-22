@@ -1,0 +1,10 @@
+PEMERIKSAAN VERSI 2
+GeoJSON: 93 file; 134696 fitur, 0 tidak valid. Kesesuaian: 296 fitur valid; tidak diperlukan perbaikan dan tidak ada komponen dibuang. Luas geometri analisis 289842.576694 ha, setelah reproyeksi dan pembulatan enam desimal 289842.563391 ha, selisih -0.013303 ha. Ini perbedaan pembulatan, bukan kehilangan poligon.
+Bangunan: 133816 fitur diuji, 0 WKB berubah; atribut luas dan persen dihapus. Ukuran 48408584 menjadi 42765102 byte.
+GeoJSON terbesar 3837845 byte, di bawah 20 MB.
+Luas kelas + komponen tepi: 289842.576694 ha; luas 22 kecamatan 289842.576880 ha; selisih -0.000187 ha.
+Pemeriksaan ini menguji geometri/penjumlahan, bukan validasi kebenaran peta, batas legal, atau lapangan.
+
+Uji hitung ulang dari parameter yang sama: 0 dari 4.242.108 sel raster berbeda. Statistik dan sensitivitas versi 2 awal telah dihitung dari vektor; skrip ulang lengkap belum diuji menyeluruh.
+
+Paket diperbarui: ZIP hasil revisi ditambahkan pada downloads/; struktur data dan GeoJSON versi 2 tidak diubah.

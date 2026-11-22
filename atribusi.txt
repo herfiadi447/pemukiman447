@@ -1,0 +1,6 @@
+Batas: Badan Pusat Statistik (BPS); OCHA Field Information Services Section (HDX COD-AB); dimodifikasi TerraLab 2026, CC BY-IGO.
+Elevasi: Copernicus WorldDEM-30 © DLR e.V. 2010–2014 dan © Airbus Defence and Space GmbH 2014–2018; Copernicus DEM free and open, atribusi wajib.
+ESA WorldCover project 2021 / Contains modified Copernicus Sentinel data, CC BY 4.0.
+© OpenStreetMap contributors, ODbL 1.0.
+© Overture Maps Foundation dan kontributor sumber bangunan termasuk OSM/Microsoft/Google/Esri; periksa ketentuan dataset asal.
+Ambarwulan dkk. 2022: CC BY-NC-ND 3.0; hanya metadata dan nilai metode yang dicantumkan.

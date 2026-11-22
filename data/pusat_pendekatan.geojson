@@ -1,0 +1,29 @@
+{
+"type": "FeatureCollection",
+"name": "pusat_pendekatan",
+"xy_coordinate_resolution": 1e-06,
+"features": [
+{ "type": "Feature", "properties": { "kecamatan": "Larompong Selatan", "keterangan": "Proksi pusat geografis, bukan lokasi kantor pemerintahan terverifikasi" }, "geometry": { "type": "Point", "coordinates": [ 120.352251, -3.613064 ] } },
+{ "type": "Feature", "properties": { "kecamatan": "Larompong", "keterangan": "Proksi pusat geografis, bukan lokasi kantor pemerintahan terverifikasi" }, "geometry": { "type": "Point", "coordinates": [ 120.291221, -3.562673 ] } },
+{ "type": "Feature", "properties": { "kecamatan": "Suli", "keterangan": "Proksi pusat geografis, bukan lokasi kantor pemerintahan terverifikasi" }, "geometry": { "type": "Point", "coordinates": [ 120.347228, -3.452536 ] } },
+{ "type": "Feature", "properties": { "kecamatan": "Suli Barat", "keterangan": "Proksi pusat geografis, bukan lokasi kantor pemerintahan terverifikasi" }, "geometry": { "type": "Point", "coordinates": [ 120.231959, -3.45649 ] } },
+{ "type": "Feature", "properties": { "kecamatan": "Belopa Utara", "keterangan": "Proksi pusat geografis, bukan lokasi kantor pemerintahan terverifikasi" }, "geometry": { "type": "Point", "coordinates": [ 120.372649, -3.358027 ] } },
+{ "type": "Feature", "properties": { "kecamatan": "Belopa", "keterangan": "Proksi pusat geografis, bukan lokasi kantor pemerintahan terverifikasi" }, "geometry": { "type": "Point", "coordinates": [ 120.36213, -3.390601 ] } },
+{ "type": "Feature", "properties": { "kecamatan": "Bajo Barat", "keterangan": "Proksi pusat geografis, bukan lokasi kantor pemerintahan terverifikasi" }, "geometry": { "type": "Point", "coordinates": [ 120.238849, -3.355728 ] } },
+{ "type": "Feature", "properties": { "kecamatan": "Bajo", "keterangan": "Proksi pusat geografis, bukan lokasi kantor pemerintahan terverifikasi" }, "geometry": { "type": "Point", "coordinates": [ 120.31741, -3.356286 ] } },
+{ "type": "Feature", "properties": { "kecamatan": "Kamanre", "keterangan": "Proksi pusat geografis, bukan lokasi kantor pemerintahan terverifikasi" }, "geometry": { "type": "Point", "coordinates": [ 120.348187, -3.315208 ] } },
+{ "type": "Feature", "properties": { "kecamatan": "Bupon", "keterangan": "Proksi pusat geografis, bukan lokasi kantor pemerintahan terverifikasi" }, "geometry": { "type": "Point", "coordinates": [ 120.233019, -3.271961 ] } },
+{ "type": "Feature", "properties": { "kecamatan": "Bua", "keterangan": "Proksi pusat geografis, bukan lokasi kantor pemerintahan terverifikasi" }, "geometry": { "type": "Point", "coordinates": [ 120.204483, -3.114112 ] } },
+{ "type": "Feature", "properties": { "kecamatan": "Ponrang Selatan", "keterangan": "Proksi pusat geografis, bukan lokasi kantor pemerintahan terverifikasi" }, "geometry": { "type": "Point", "coordinates": [ 120.347148, -3.248835 ] } },
+{ "type": "Feature", "properties": { "kecamatan": "Ponrang", "keterangan": "Proksi pusat geografis, bukan lokasi kantor pemerintahan terverifikasi" }, "geometry": { "type": "Point", "coordinates": [ 120.308946, -3.210634 ] } },
+{ "type": "Feature", "properties": { "kecamatan": "Bassesangtempe", "keterangan": "Proksi pusat geografis, bukan lokasi kantor pemerintahan terverifikasi" }, "geometry": { "type": "Point", "coordinates": [ 120.076331, -3.219773 ] } },
+{ "type": "Feature", "properties": { "kecamatan": "Bassesangtempe Utara", "keterangan": "Proksi pusat geografis, bukan lokasi kantor pemerintahan terverifikasi" }, "geometry": { "type": "Point", "coordinates": [ 120.084281, -3.106111 ] } },
+{ "type": "Feature", "properties": { "kecamatan": "Latimojong", "keterangan": "Proksi pusat geografis, bukan lokasi kantor pemerintahan terverifikasi" }, "geometry": { "type": "Point", "coordinates": [ 120.11683, -3.37988 ] } },
+{ "type": "Feature", "properties": { "kecamatan": "Walenrang", "keterangan": "Proksi pusat geografis, bukan lokasi kantor pemerintahan terverifikasi" }, "geometry": { "type": "Point", "coordinates": [ 120.125246, -2.889161 ] } },
+{ "type": "Feature", "properties": { "kecamatan": "Walenrang Barat", "keterangan": "Proksi pusat geografis, bukan lokasi kantor pemerintahan terverifikasi" }, "geometry": { "type": "Point", "coordinates": [ 120.007693, -2.812792 ] } },
+{ "type": "Feature", "properties": { "kecamatan": "Walenrang Utara", "keterangan": "Proksi pusat geografis, bukan lokasi kantor pemerintahan terverifikasi" }, "geometry": { "type": "Point", "coordinates": [ 120.106478, -2.759822 ] } },
+{ "type": "Feature", "properties": { "kecamatan": "Lamasi", "keterangan": "Proksi pusat geografis, bukan lokasi kantor pemerintahan terverifikasi" }, "geometry": { "type": "Point", "coordinates": [ 120.189305, -2.800675 ] } },
+{ "type": "Feature", "properties": { "kecamatan": "Walenrang Timur", "keterangan": "Proksi pusat geografis, bukan lokasi kantor pemerintahan terverifikasi" }, "geometry": { "type": "Point", "coordinates": [ 120.227003, -2.894397 ] } },
+{ "type": "Feature", "properties": { "kecamatan": "Lamasi Timur", "keterangan": "Proksi pusat geografis, bukan lokasi kantor pemerintahan terverifikasi" }, "geometry": { "type": "Point", "coordinates": [ 120.252505, -2.874102 ] } }
+]
+}

@@ -1,0 +1,902 @@
+{
+  "versi": 2,
+  "tanggal_proses": "2026-11-22",
+  "crs_geojson": "EPSG:4326",
+  "crs_analisis": "EPSG:32751",
+  "crs_statistik": "WGS84 Lambert azimuthal equal-area, lon_0=120.15, lat_0=-3.16",
+  "bounds": [
+    119.872025,
+    -3.667374,
+    120.420926,
+    -2.665903
+  ],
+  "zoom_awal": 9,
+  "parameter": {
+    "sumber": "tabel/metodologi.csv",
+    "file": "tabel/parameter.json",
+    "bobot": {
+      "lereng": 0.44541466272589647,
+      "jalan": 0.2958792666298928,
+      "pusat": 0.13696997647172163,
+      "elevasi": 0.0913474143234342,
+      "sungai": 0.03038867984905499
+    },
+    "catatan": "AHP 5x5 adaptasi; batas kelas interval sama asumsi",
+    "ambang": {
+      "slope_pct_breaks": [
+        8,
+        15,
+        45
+      ],
+      "road_m_breaks": [
+        50,
+        500,
+        1000
+      ],
+      "center_m_breaks": [
+        2000,
+        4000,
+        6000
+      ],
+      "elevation_m_breaks": [
+        500,
+        1000,
+        1500,
+        2000
+      ],
+      "river_m_breaks": [
+        100,
+        300,
+        600
+      ],
+      "result_breaks": [
+        2.5,
+        5,
+        7.5
+      ],
+      "excluded_worldcover": [
+        50,
+        80,
+        90,
+        95
+      ]
+    }
+  },
+  "layers": [
+    {
+      "id": "batas_kabupaten",
+      "nama": "Batas Kabupaten Luwu",
+      "tipe_geometri": "MultiPolygon",
+      "path": "data/batas_kabupaten.geojson",
+      "field_popup": [
+        "kode",
+        "nama",
+        "luas_ha"
+      ],
+      "legenda": [
+        {
+          "nama": "Batas kabupaten",
+          "warna_hex": "#282828",
+          "urutan": 1
+        }
+      ]
+    },
+    {
+      "id": "batas_kecamatan",
+      "nama": "Batas kecamatan",
+      "tipe_geometri": "MultiPolygon",
+      "path": "data/batas_kecamatan.geojson",
+      "field_popup": [
+        "kode",
+        "nama",
+        "luas_ha"
+      ],
+      "legenda": [
+        {
+          "nama": "Batas kecamatan",
+          "warna_hex": "#606060",
+          "urutan": 1
+        }
+      ]
+    },
+    {
+      "id": "kesesuaian",
+      "nama": "Kesesuaian versi 2",
+      "tipe_geometri": "MultiPolygon",
+      "path": [
+        "data/kesesuaian_bajo.geojson",
+        "data/kesesuaian_bajo_barat.geojson",
+        "data/kesesuaian_bassesangtempe.geojson",
+        "data/kesesuaian_bassesangtempe_utara.geojson",
+        "data/kesesuaian_belopa.geojson",
+        "data/kesesuaian_belopa_utara.geojson",
+        "data/kesesuaian_bua.geojson",
+        "data/kesesuaian_bupon.geojson",
+        "data/kesesuaian_kamanre.geojson",
+        "data/kesesuaian_lamasi.geojson",
+        "data/kesesuaian_lamasi_timur.geojson",
+        "data/kesesuaian_larompong.geojson",
+        "data/kesesuaian_larompong_selatan.geojson",
+        "data/kesesuaian_latimojong.geojson",
+        "data/kesesuaian_ponrang.geojson",
+        "data/kesesuaian_ponrang_selatan.geojson",
+        "data/kesesuaian_suli.geojson",
+        "data/kesesuaian_suli_barat.geojson",
+        "data/kesesuaian_walenrang.geojson",
+        "data/kesesuaian_walenrang_barat.geojson",
+        "data/kesesuaian_walenrang_timur.geojson",
+        "data/kesesuaian_walenrang_utara.geojson"
+      ],
+      "field_popup": [
+        "kode_kelas",
+        "nama_kelas",
+        "luas_ha",
+        "persen",
+        "kecamatan",
+        "pertanian",
+        "komponen"
+      ],
+      "legenda": [
+        {
+          "kode": 1,
+          "nama": "S1 sangat sesuai",
+          "warna_hex": "#19734b",
+          "urutan": 1
+        },
+        {
+          "kode": 2,
+          "nama": "S2 sesuai",
+          "warna_hex": "#8ebf71",
+          "urutan": 2
+        },
+        {
+          "kode": 3,
+          "nama": "S3 sesuai bersyarat",
+          "warna_hex": "#f4d16f",
+          "urutan": 3
+        },
+        {
+          "kode": 4,
+          "nama": "N tidak sesuai",
+          "warna_hex": "#e38c53",
+          "urutan": 4
+        },
+        {
+          "kode": 5,
+          "nama": "Kendala",
+          "warna_hex": "#b74643",
+          "urutan": 5
+        },
+        {
+          "kode": 6,
+          "nama": "Tidak dinilai",
+          "warna_hex": "#bebebe",
+          "urutan": 6
+        },
+        {
+          "kode": "pertanian",
+          "nama": "Lahan pertanian: perlu kehati-hatian",
+          "warna_hex": "#c677cc",
+          "urutan": 7
+        }
+      ],
+      "index_kecamatan": [
+        {
+          "kecamatan": "Bajo",
+          "path": "data/kesesuaian_bajo.geojson",
+          "bytes": 650144
+        },
+        {
+          "kecamatan": "Bajo Barat",
+          "path": "data/kesesuaian_bajo_barat.geojson",
+          "bytes": 1151615
+        },
+        {
+          "kecamatan": "Bassesangtempe",
+          "path": "data/kesesuaian_bassesangtempe.geojson",
+          "bytes": 2625948
+        },
+        {
+          "kecamatan": "Bassesangtempe Utara",
+          "path": "data/kesesuaian_bassesangtempe_utara.geojson",
+          "bytes": 1785613
+        },
+        {
+          "kecamatan": "Belopa",
+          "path": "data/kesesuaian_belopa.geojson",
+          "bytes": 458881
+        },
+        {
+          "kecamatan": "Belopa Utara",
+          "path": "data/kesesuaian_belopa_utara.geojson",
+          "bytes": 378562
+        },
+        {
+          "kecamatan": "Bua",
+          "path": "data/kesesuaian_bua.geojson",
+          "bytes": 1857639
+        },
+        {
+          "kecamatan": "Bupon",
+          "path": "data/kesesuaian_bupon.geojson",
+          "bytes": 1584834
+        },
+        {
+          "kecamatan": "Kamanre",
+          "path": "data/kesesuaian_kamanre.geojson",
+          "bytes": 529869
+        },
+        {
+          "kecamatan": "Lamasi",
+          "path": "data/kesesuaian_lamasi.geojson",
+          "bytes": 528416
+        },
+        {
+          "kecamatan": "Lamasi Timur",
+          "path": "data/kesesuaian_lamasi_timur.geojson",
+          "bytes": 800910
+        },
+        {
+          "kecamatan": "Larompong",
+          "path": "data/kesesuaian_larompong.geojson",
+          "bytes": 2577962
+        },
+        {
+          "kecamatan": "Larompong Selatan",
+          "path": "data/kesesuaian_larompong_selatan.geojson",
+          "bytes": 1360768
+        },
+        {
+          "kecamatan": "Latimojong",
+          "path": "data/kesesuaian_latimojong.geojson",
+          "bytes": 2541705
+        },
+        {
+          "kecamatan": "Ponrang",
+          "path": "data/kesesuaian_ponrang.geojson",
+          "bytes": 1104408
+        },
+        {
+          "kecamatan": "Ponrang Selatan",
+          "path": "data/kesesuaian_ponrang_selatan.geojson",
+          "bytes": 752544
+        },
+        {
+          "kecamatan": "Suli",
+          "path": "data/kesesuaian_suli.geojson",
+          "bytes": 977504
+        },
+        {
+          "kecamatan": "Suli Barat",
+          "path": "data/kesesuaian_suli_barat.geojson",
+          "bytes": 2011531
+        },
+        {
+          "kecamatan": "Walenrang",
+          "path": "data/kesesuaian_walenrang.geojson",
+          "bytes": 974811
+        },
+        {
+          "kecamatan": "Walenrang Barat",
+          "path": "data/kesesuaian_walenrang_barat.geojson",
+          "bytes": 2530969
+        },
+        {
+          "kecamatan": "Walenrang Timur",
+          "path": "data/kesesuaian_walenrang_timur.geojson",
+          "bytes": 684834
+        },
+        {
+          "kecamatan": "Walenrang Utara",
+          "path": "data/kesesuaian_walenrang_utara.geojson",
+          "bytes": 2620540
+        }
+      ]
+    },
+    {
+      "id": "kemiringan_kelas",
+      "nama": "Skor lereng persen",
+      "tipe_geometri": "MultiPolygon",
+      "path": [
+        "data/kemiringan_kelas_bajo.geojson",
+        "data/kemiringan_kelas_bajo_barat.geojson",
+        "data/kemiringan_kelas_bassesangtempe.geojson",
+        "data/kemiringan_kelas_bassesangtempe_utara.geojson",
+        "data/kemiringan_kelas_belopa.geojson",
+        "data/kemiringan_kelas_belopa_utara.geojson",
+        "data/kemiringan_kelas_bua.geojson",
+        "data/kemiringan_kelas_bupon.geojson",
+        "data/kemiringan_kelas_kamanre.geojson",
+        "data/kemiringan_kelas_lamasi.geojson",
+        "data/kemiringan_kelas_lamasi_timur.geojson",
+        "data/kemiringan_kelas_larompong.geojson",
+        "data/kemiringan_kelas_larompong_selatan.geojson",
+        "data/kemiringan_kelas_latimojong.geojson",
+        "data/kemiringan_kelas_ponrang.geojson",
+        "data/kemiringan_kelas_ponrang_selatan.geojson",
+        "data/kemiringan_kelas_suli.geojson",
+        "data/kemiringan_kelas_suli_barat.geojson",
+        "data/kemiringan_kelas_walenrang.geojson",
+        "data/kemiringan_kelas_walenrang_barat.geojson",
+        "data/kemiringan_kelas_walenrang_timur.geojson",
+        "data/kemiringan_kelas_walenrang_utara.geojson"
+      ],
+      "field_popup": [
+        "kode_kelas",
+        "nama_kelas",
+        "skor",
+        "luas_ha",
+        "persen",
+        "kecamatan"
+      ],
+      "legenda": [
+        {
+          "kode": 1,
+          "nama": "Lereng <8%: skor 10",
+          "warna_hex": "#19734b",
+          "urutan": 1
+        },
+        {
+          "kode": 2,
+          "nama": "Lereng 8–<15%: skor 8",
+          "warna_hex": "#8ebf71",
+          "urutan": 2
+        },
+        {
+          "kode": 3,
+          "nama": "Lereng 15–<45%: skor 6",
+          "warna_hex": "#f4d16f",
+          "urutan": 3
+        },
+        {
+          "kode": 4,
+          "nama": "Lereng ≥45%: kendala",
+          "warna_hex": "#b74643",
+          "urutan": 4
+        }
+      ],
+      "index_kecamatan": [
+        {
+          "kecamatan": "Bajo",
+          "path": "data/kemiringan_kelas_bajo.geojson",
+          "bytes": 394044
+        },
+        {
+          "kecamatan": "Bajo Barat",
+          "path": "data/kemiringan_kelas_bajo_barat.geojson",
+          "bytes": 1174358
+        },
+        {
+          "kecamatan": "Bassesangtempe",
+          "path": "data/kemiringan_kelas_bassesangtempe.geojson",
+          "bytes": 2955375
+        },
+        {
+          "kecamatan": "Bassesangtempe Utara",
+          "path": "data/kemiringan_kelas_bassesangtempe_utara.geojson",
+          "bytes": 1718411
+        },
+        {
+          "kecamatan": "Belopa",
+          "path": "data/kemiringan_kelas_belopa.geojson",
+          "bytes": 133626
+        },
+        {
+          "kecamatan": "Belopa Utara",
+          "path": "data/kemiringan_kelas_belopa_utara.geojson",
+          "bytes": 42501
+        },
+        {
+          "kecamatan": "Bua",
+          "path": "data/kemiringan_kelas_bua.geojson",
+          "bytes": 1241600
+        },
+        {
+          "kecamatan": "Bupon",
+          "path": "data/kemiringan_kelas_bupon.geojson",
+          "bytes": 1382858
+        },
+        {
+          "kecamatan": "Kamanre",
+          "path": "data/kemiringan_kelas_kamanre.geojson",
+          "bytes": 50904
+        },
+        {
+          "kecamatan": "Lamasi",
+          "path": "data/kemiringan_kelas_lamasi.geojson",
+          "bytes": 156908
+        },
+        {
+          "kecamatan": "Lamasi Timur",
+          "path": "data/kemiringan_kelas_lamasi_timur.geojson",
+          "bytes": 175323
+        },
+        {
+          "kecamatan": "Larompong",
+          "path": "data/kemiringan_kelas_larompong.geojson",
+          "bytes": 2526486
+        },
+        {
+          "kecamatan": "Larompong Selatan",
+          "path": "data/kemiringan_kelas_larompong_selatan.geojson",
+          "bytes": 1468703
+        },
+        {
+          "kecamatan": "Latimojong",
+          "path": "data/kemiringan_kelas_latimojong.geojson",
+          "bytes": 3025866
+        },
+        {
+          "kecamatan": "Ponrang",
+          "path": "data/kemiringan_kelas_ponrang.geojson",
+          "bytes": 547871
+        },
+        {
+          "kecamatan": "Ponrang Selatan",
+          "path": "data/kemiringan_kelas_ponrang_selatan.geojson",
+          "bytes": 116686
+        },
+        {
+          "kecamatan": "Suli",
+          "path": "data/kemiringan_kelas_suli.geojson",
+          "bytes": 597441
+        },
+        {
+          "kecamatan": "Suli Barat",
+          "path": "data/kemiringan_kelas_suli_barat.geojson",
+          "bytes": 1996102
+        },
+        {
+          "kecamatan": "Walenrang",
+          "path": "data/kemiringan_kelas_walenrang.geojson",
+          "bytes": 716499
+        },
+        {
+          "kecamatan": "Walenrang Barat",
+          "path": "data/kemiringan_kelas_walenrang_barat.geojson",
+          "bytes": 2651486
+        },
+        {
+          "kecamatan": "Walenrang Timur",
+          "path": "data/kemiringan_kelas_walenrang_timur.geojson",
+          "bytes": 204760
+        },
+        {
+          "kecamatan": "Walenrang Utara",
+          "path": "data/kemiringan_kelas_walenrang_utara.geojson",
+          "bytes": 2610445
+        }
+      ]
+    },
+    {
+      "id": "tutupan_lahan_kelas",
+      "nama": "WorldCover asli (skor v1 tidak digunakan)",
+      "tipe_geometri": "MultiPolygon",
+      "path": [
+        "data/tutupan_lahan_kelas_bajo.geojson",
+        "data/tutupan_lahan_kelas_bajo_barat.geojson",
+        "data/tutupan_lahan_kelas_bassesangtempe.geojson",
+        "data/tutupan_lahan_kelas_bassesangtempe_utara.geojson",
+        "data/tutupan_lahan_kelas_belopa.geojson",
+        "data/tutupan_lahan_kelas_belopa_utara.geojson",
+        "data/tutupan_lahan_kelas_bua.geojson",
+        "data/tutupan_lahan_kelas_bupon.geojson",
+        "data/tutupan_lahan_kelas_kamanre.geojson",
+        "data/tutupan_lahan_kelas_lamasi.geojson",
+        "data/tutupan_lahan_kelas_lamasi_timur.geojson",
+        "data/tutupan_lahan_kelas_larompong.geojson",
+        "data/tutupan_lahan_kelas_larompong_selatan.geojson",
+        "data/tutupan_lahan_kelas_latimojong.geojson",
+        "data/tutupan_lahan_kelas_ponrang.geojson",
+        "data/tutupan_lahan_kelas_ponrang_selatan.geojson",
+        "data/tutupan_lahan_kelas_suli.geojson",
+        "data/tutupan_lahan_kelas_suli_barat.geojson",
+        "data/tutupan_lahan_kelas_walenrang.geojson",
+        "data/tutupan_lahan_kelas_walenrang_barat.geojson",
+        "data/tutupan_lahan_kelas_walenrang_timur.geojson",
+        "data/tutupan_lahan_kelas_walenrang_utara.geojson"
+      ],
+      "field_popup": [
+        "kode_worldcover",
+        "nama_worldcover",
+        "skor_v1",
+        "nama_kelas",
+        "luas_ha",
+        "persen",
+        "kecamatan"
+      ],
+      "legenda": [
+        {
+          "kode": 10,
+          "nama": "Skor v1 1: Tutupan pohon (WorldCover 10)",
+          "warna_hex": "#006400",
+          "urutan": 1
+        },
+        {
+          "kode": 20,
+          "nama": "Skor v1 5: Semak (WorldCover 20)",
+          "warna_hex": "#ffbb22",
+          "urutan": 2
+        },
+        {
+          "kode": 30,
+          "nama": "Skor v1 5: Padang rumput (WorldCover 30)",
+          "warna_hex": "#ffff4c",
+          "urutan": 3
+        },
+        {
+          "kode": 40,
+          "nama": "Skor v1 3: Lahan pertanian (WorldCover 40)",
+          "warna_hex": "#f096ff",
+          "urutan": 4
+        },
+        {
+          "kode": 50,
+          "nama": "Masker / tanpa skor: Terbangun (WorldCover 50)",
+          "warna_hex": "#fa0000",
+          "urutan": 5
+        },
+        {
+          "kode": 60,
+          "nama": "Skor v1 5: Lahan terbuka (WorldCover 60)",
+          "warna_hex": "#b4b4b4",
+          "urutan": 6
+        },
+        {
+          "kode": 80,
+          "nama": "Masker / tanpa skor: Badan air (WorldCover 80)",
+          "warna_hex": "#0064c8",
+          "urutan": 7
+        },
+        {
+          "kode": 90,
+          "nama": "Masker / tanpa skor: Rawa vegetasi (WorldCover 90)",
+          "warna_hex": "#0096a0",
+          "urutan": 8
+        },
+        {
+          "kode": 95,
+          "nama": "Masker / tanpa skor: Mangrove (WorldCover 95)",
+          "warna_hex": "#00cf75",
+          "urutan": 9
+        }
+      ],
+      "index_kecamatan": [
+        {
+          "kecamatan": "Bajo",
+          "path": "data/tutupan_lahan_kelas_bajo.geojson",
+          "bytes": 286843
+        },
+        {
+          "kecamatan": "Bajo Barat",
+          "path": "data/tutupan_lahan_kelas_bajo_barat.geojson",
+          "bytes": 419612
+        },
+        {
+          "kecamatan": "Bassesangtempe",
+          "path": "data/tutupan_lahan_kelas_bassesangtempe.geojson",
+          "bytes": 1145206
+        },
+        {
+          "kecamatan": "Bassesangtempe Utara",
+          "path": "data/tutupan_lahan_kelas_bassesangtempe_utara.geojson",
+          "bytes": 852137
+        },
+        {
+          "kecamatan": "Belopa",
+          "path": "data/tutupan_lahan_kelas_belopa.geojson",
+          "bytes": 275597
+        },
+        {
+          "kecamatan": "Belopa Utara",
+          "path": "data/tutupan_lahan_kelas_belopa_utara.geojson",
+          "bytes": 266551
+        },
+        {
+          "kecamatan": "Bua",
+          "path": "data/tutupan_lahan_kelas_bua.geojson",
+          "bytes": 1252202
+        },
+        {
+          "kecamatan": "Bupon",
+          "path": "data/tutupan_lahan_kelas_bupon.geojson",
+          "bytes": 749162
+        },
+        {
+          "kecamatan": "Kamanre",
+          "path": "data/tutupan_lahan_kelas_kamanre.geojson",
+          "bytes": 442421
+        },
+        {
+          "kecamatan": "Lamasi",
+          "path": "data/tutupan_lahan_kelas_lamasi.geojson",
+          "bytes": 308709
+        },
+        {
+          "kecamatan": "Lamasi Timur",
+          "path": "data/tutupan_lahan_kelas_lamasi_timur.geojson",
+          "bytes": 685376
+        },
+        {
+          "kecamatan": "Larompong",
+          "path": "data/tutupan_lahan_kelas_larompong.geojson",
+          "bytes": 1181645
+        },
+        {
+          "kecamatan": "Larompong Selatan",
+          "path": "data/tutupan_lahan_kelas_larompong_selatan.geojson",
+          "bytes": 414899
+        },
+        {
+          "kecamatan": "Latimojong",
+          "path": "data/tutupan_lahan_kelas_latimojong.geojson",
+          "bytes": 697612
+        },
+        {
+          "kecamatan": "Ponrang",
+          "path": "data/tutupan_lahan_kelas_ponrang.geojson",
+          "bytes": 577505
+        },
+        {
+          "kecamatan": "Ponrang Selatan",
+          "path": "data/tutupan_lahan_kelas_ponrang_selatan.geojson",
+          "bytes": 622161
+        },
+        {
+          "kecamatan": "Suli",
+          "path": "data/tutupan_lahan_kelas_suli.geojson",
+          "bytes": 498967
+        },
+        {
+          "kecamatan": "Suli Barat",
+          "path": "data/tutupan_lahan_kelas_suli_barat.geojson",
+          "bytes": 861114
+        },
+        {
+          "kecamatan": "Walenrang",
+          "path": "data/tutupan_lahan_kelas_walenrang.geojson",
+          "bytes": 413733
+        },
+        {
+          "kecamatan": "Walenrang Barat",
+          "path": "data/tutupan_lahan_kelas_walenrang_barat.geojson",
+          "bytes": 982068
+        },
+        {
+          "kecamatan": "Walenrang Timur",
+          "path": "data/tutupan_lahan_kelas_walenrang_timur.geojson",
+          "bytes": 455784
+        },
+        {
+          "kecamatan": "Walenrang Utara",
+          "path": "data/tutupan_lahan_kelas_walenrang_utara.geojson",
+          "bytes": 845366
+        }
+      ]
+    },
+    {
+      "id": "jalan",
+      "nama": "Jalan utama OSM",
+      "tipe_geometri": "LineString",
+      "path": "data/jalan.geojson",
+      "field_popup": [
+        "jenis",
+        "nama"
+      ],
+      "legenda": [
+        {
+          "nama": "Jalan utama OSM",
+          "warna_hex": "#444444",
+          "urutan": 1
+        }
+      ]
+    },
+    {
+      "id": "sungai",
+      "nama": "Sungai dan anak sungai OSM",
+      "tipe_geometri": "LineString / MultiLineString",
+      "path": "data/sungai.geojson",
+      "field_popup": [
+        "jenis",
+        "nama"
+      ],
+      "legenda": [
+        {
+          "nama": "Sungai dan anak sungai",
+          "warna_hex": "#377db0",
+          "urutan": 1
+        }
+      ]
+    },
+    {
+      "id": "bangunan",
+      "nama": "Bangunan",
+      "tipe_geometri": "MultiPolygon",
+      "path": [
+        "data/bangunan_bajo.geojson",
+        "data/bangunan_bajo_barat.geojson",
+        "data/bangunan_bassesangtempe.geojson",
+        "data/bangunan_bassesangtempe_utara.geojson",
+        "data/bangunan_belopa.geojson",
+        "data/bangunan_belopa_utara.geojson",
+        "data/bangunan_bua.geojson",
+        "data/bangunan_bupon.geojson",
+        "data/bangunan_kamanre.geojson",
+        "data/bangunan_lamasi.geojson",
+        "data/bangunan_lamasi_timur.geojson",
+        "data/bangunan_larompong.geojson",
+        "data/bangunan_larompong_selatan.geojson",
+        "data/bangunan_latimojong.geojson",
+        "data/bangunan_ponrang.geojson",
+        "data/bangunan_ponrang_selatan.geojson",
+        "data/bangunan_suli.geojson",
+        "data/bangunan_suli_barat.geojson",
+        "data/bangunan_walenrang.geojson",
+        "data/bangunan_walenrang_barat.geojson",
+        "data/bangunan_walenrang_timur.geojson",
+        "data/bangunan_walenrang_utara.geojson"
+      ],
+      "field_popup": [
+        "kode_kelas",
+        "nama_kelas",
+        "kecamatan"
+      ],
+      "legenda": [
+        {
+          "nama": "Bangunan",
+          "warna_hex": "#7b6f6f",
+          "urutan": 1
+        }
+      ],
+      "index_kecamatan": [
+        {
+          "kecamatan": "Bajo",
+          "path": "data/bangunan_bajo.geojson",
+          "bytes": 1760492
+        },
+        {
+          "kecamatan": "Bajo Barat",
+          "path": "data/bangunan_bajo_barat.geojson",
+          "bytes": 1211189
+        },
+        {
+          "kecamatan": "Bassesangtempe",
+          "path": "data/bangunan_bassesangtempe.geojson",
+          "bytes": 641100
+        },
+        {
+          "kecamatan": "Bassesangtempe Utara",
+          "path": "data/bangunan_bassesangtempe_utara.geojson",
+          "bytes": 1087552
+        },
+        {
+          "kecamatan": "Belopa",
+          "path": "data/bangunan_belopa.geojson",
+          "bytes": 1819125
+        },
+        {
+          "kecamatan": "Belopa Utara",
+          "path": "data/bangunan_belopa_utara.geojson",
+          "bytes": 1773140
+        },
+        {
+          "kecamatan": "Bua",
+          "path": "data/bangunan_bua.geojson",
+          "bytes": 3133341
+        },
+        {
+          "kecamatan": "Bupon",
+          "path": "data/bangunan_bupon.geojson",
+          "bytes": 1900186
+        },
+        {
+          "kecamatan": "Kamanre",
+          "path": "data/bangunan_kamanre.geojson",
+          "bytes": 1333423
+        },
+        {
+          "kecamatan": "Lamasi",
+          "path": "data/bangunan_lamasi.geojson",
+          "bytes": 2625102
+        },
+        {
+          "kecamatan": "Lamasi Timur",
+          "path": "data/bangunan_lamasi_timur.geojson",
+          "bytes": 1663846
+        },
+        {
+          "kecamatan": "Larompong",
+          "path": "data/bangunan_larompong.geojson",
+          "bytes": 3837845
+        },
+        {
+          "kecamatan": "Larompong Selatan",
+          "path": "data/bangunan_larompong_selatan.geojson",
+          "bytes": 2363592
+        },
+        {
+          "kecamatan": "Latimojong",
+          "path": "data/bangunan_latimojong.geojson",
+          "bytes": 816491
+        },
+        {
+          "kecamatan": "Ponrang",
+          "path": "data/bangunan_ponrang.geojson",
+          "bytes": 2551703
+        },
+        {
+          "kecamatan": "Ponrang Selatan",
+          "path": "data/bangunan_ponrang_selatan.geojson",
+          "bytes": 2552556
+        },
+        {
+          "kecamatan": "Suli",
+          "path": "data/bangunan_suli.geojson",
+          "bytes": 2516262
+        },
+        {
+          "kecamatan": "Suli Barat",
+          "path": "data/bangunan_suli_barat.geojson",
+          "bytes": 1671225
+        },
+        {
+          "kecamatan": "Walenrang",
+          "path": "data/bangunan_walenrang.geojson",
+          "bytes": 2315811
+        },
+        {
+          "kecamatan": "Walenrang Barat",
+          "path": "data/bangunan_walenrang_barat.geojson",
+          "bytes": 806348
+        },
+        {
+          "kecamatan": "Walenrang Timur",
+          "path": "data/bangunan_walenrang_timur.geojson",
+          "bytes": 1776936
+        },
+        {
+          "kecamatan": "Walenrang Utara",
+          "path": "data/bangunan_walenrang_utara.geojson",
+          "bytes": 2607837
+        }
+      ]
+    },
+    {
+      "id": "pusat_pendekatan",
+      "nama": "Pusat geografis kecamatan proksi",
+      "tipe_geometri": "Point",
+      "path": "data/pusat_pendekatan.geojson",
+      "field_popup": [
+        "kecamatan",
+        "keterangan"
+      ],
+      "legenda": [
+        {
+          "nama": "Pusat kecamatan proksi",
+          "warna_hex": "#8a4ea8",
+          "urutan": 1
+        }
+      ]
+    }
+  ],
+  "downloads": [
+    {
+      "id": "hasil_revisi_terbaru",
+      "nama": "Semua hasil revisi terbaru",
+      "path": "downloads/hasil_revisi_terbaru.zip",
+      "format": "ZIP"
+    },
+    {
+      "id": "data_gis",
+      "nama": "SHP dan gaya QGIS",
+      "path": "downloads/data_gis.zip",
+      "format": "ZIP"
+    },
+    {
+      "id": "peta_pdf",
+      "nama": "Peta kesesuaian A4",
+      "path": "downloads/peta_kesesuaian.pdf",
+      "format": "PDF"
+    }
+  ]
+}

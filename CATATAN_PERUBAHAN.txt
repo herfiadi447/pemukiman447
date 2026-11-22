@@ -1,0 +1,7 @@
+PERUBAHAN VERSI 1 KE 2
+Bobot asumsi 40/30/20/10 diganti sub-AHP 5 kriteria; tutupan lahan tanpa bobot, kendala eksplisit; jarak ke pusat dan elevasi ditambahkan. Statistik luas dari UTM diganti equal-area Luwu. Tidak ada penyederhanaan. Pusat pemerintahan didekati titik geografis kecamatan.
+
+Versi 1 dihitung ulang equal-area: sangat rendah 29871.1629 ha; rendah 104771.4935; sedang 49620.8354; tinggi 46683.9972; sangat tinggi 31081.2734; tidak dinilai 27813.8145.
+Versi 2 equal-area: S1 20339.4839 ha; S2 83229.0904; S3 67849.6337; N 0.0000; kendala 90610.5546; tidak dinilai 27813.8141.
+Kelas v1 dan v2 berbeda jumlah dan ambang; angka yang bersebelahan bukan padanan langsung.
+Asumsi kelas, pusat, pemetaan jalan/sungai, rawa/mangrove; tidak ada validasi lapangan, RTRW dan risiko tidak diuji.

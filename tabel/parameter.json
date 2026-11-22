@@ -1,0 +1,97 @@
+{
+  "version": 2,
+  "weights_original": {
+    "lereng": 0.2905,
+    "jalan": 0.2103,
+    "pusat": 0.1093,
+    "elevasi": 0.0784,
+    "sungai": 0.0188
+  },
+  "weights_ahp": {
+    "lereng": 0.44541466272589647,
+    "jalan": 0.2958792666298928,
+    "pusat": 0.13696997647172163,
+    "elevasi": 0.0913474143234342,
+    "sungai": 0.03038867984905499
+  },
+  "slope_pct_breaks": [
+    8,
+    15,
+    45
+  ],
+  "slope_scores": [
+    10,
+    8,
+    6,
+    0
+  ],
+  "road_m_breaks": [
+    50,
+    500,
+    1000
+  ],
+  "road_scores": [
+    10,
+    8,
+    4,
+    2
+  ],
+  "center_m_breaks": [
+    2000,
+    4000,
+    6000
+  ],
+  "center_scores": [
+    10,
+    8,
+    4,
+    2
+  ],
+  "elevation_m_breaks": [
+    500,
+    1000,
+    1500,
+    2000
+  ],
+  "elevation_scores": [
+    10,
+    8,
+    6,
+    4,
+    0
+  ],
+  "river_m_breaks": [
+    100,
+    300,
+    600
+  ],
+  "river_scores": [
+    0,
+    10,
+    8,
+    6
+  ],
+  "result_breaks": [
+    2.5,
+    5,
+    7.5
+  ],
+  "excluded_worldcover": [
+    50,
+    80,
+    90,
+    95
+  ],
+  "agriculture_code": 40,
+  "road_types": [
+    "trunk",
+    "primary",
+    "secondary",
+    "tertiary"
+  ],
+  "river_types": [
+    "river",
+    "stream"
+  ],
+  "source": "Ambarwulan dkk. 2022, doi:10.24425/jwld.2022.140775; sub-AHP dan batas kelas adalah adaptasi"
+}

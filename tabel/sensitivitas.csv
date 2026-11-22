@@ -1,0 +1,277 @@
+﻿skenario,kecamatan,luas_berpindah_ha,luas_dinilai_ha,persen_luas_dinilai_berpindah,persen_luas_kecamatan_berpindah
+lereng_minus_10pct,Bajo,327.956463,4206.448058,7.796518,5.92999
+lereng_minus_10pct,Bajo Barat,159.428223,6558.331026,2.430927,1.573309
+lereng_minus_10pct,Bassesangtempe,224.874992,13525.624073,1.662585,0.810187
+lereng_minus_10pct,Bassesangtempe Utara,376.185943,7890.560387,4.767544,2.647013
+lereng_minus_10pct,Belopa,82.961982,1932.458847,4.293079,2.58457
+lereng_minus_10pct,Belopa Utara,440.705647,1629.003614,27.053694,14.392116
+lereng_minus_10pct,Bua,171.552386,11608.875287,1.477769,0.988203
+lereng_minus_10pct,Bupon,283.825303,9647.802567,2.941865,1.985365
+lereng_minus_10pct,Kamanre,294.385478,4120.053844,7.145185,5.094958
+lereng_minus_10pct,Lamasi,630.821376,3128.723884,20.162258,14.489244
+lereng_minus_10pct,Lamasi Timur,616.028566,3418.219709,18.021913,9.643375
+lereng_minus_10pct,Larompong,146.43984,16740.970249,0.874739,0.641917
+lereng_minus_10pct,Larompong Selatan,92.911976,8257.071138,1.125241,0.829721
+lereng_minus_10pct,Latimojong,28.652808,12456.170339,0.230029,0.088607
+lereng_minus_10pct,Ponrang,880.514904,7183.853862,12.25686,7.850095
+lereng_minus_10pct,Ponrang Selatan,811.225983,5952.778647,13.627686,9.173286
+lereng_minus_10pct,Suli,429.880243,5559.759703,7.731993,4.99937
+lereng_minus_10pct,Suli Barat,24.508161,12737.236841,0.192413,0.132965
+lereng_minus_10pct,Walenrang,258.467409,5178.986334,4.990695,3.321858
+lereng_minus_10pct,Walenrang Barat,43.565219,11310.910886,0.385161,0.162331
+lereng_minus_10pct,Walenrang Timur,720.480109,3898.573242,18.48061,12.136931
+lereng_minus_10pct,Walenrang Utara,278.541818,14475.795428,1.92419,1.171783
+lereng_minus_10pct,SELURUH KABUPATEN,7323.914828,171418.207963,4.272542,2.52686
+lereng_plus_10pct,Bajo,4.475907,4206.448058,0.106406,0.080932
+lereng_plus_10pct,Bajo Barat,46.4383,6558.331026,0.708081,0.458274
+lereng_plus_10pct,Bassesangtempe,292.18414,13525.624073,2.160227,1.052691
+lereng_plus_10pct,Bassesangtempe Utara,47.447872,7890.560387,0.601324,0.333865
+lereng_plus_10pct,Belopa,2.789881,1932.458847,0.14437,0.086915
+lereng_plus_10pct,Belopa Utara,0.0,1629.003614,0.0,0.0
+lereng_plus_10pct,Bua,330.351659,11608.875287,2.845682,1.902944
+lereng_plus_10pct,Bupon,225.235957,9647.802567,2.334583,1.575531
+lereng_plus_10pct,Kamanre,10.383711,4120.053844,0.252029,0.179712
+lereng_plus_10pct,Lamasi,0.0,3128.723884,0.0,0.0
+lereng_plus_10pct,Lamasi Timur,0.0,3418.219709,0.0,0.0
+lereng_plus_10pct,Larompong,209.43058,16740.970249,1.251006,0.918036
+lereng_plus_10pct,Larompong Selatan,72.547634,8257.071138,0.878612,0.647864
+lereng_plus_10pct,Latimojong,59.664611,12456.170339,0.478996,0.18451
+lereng_plus_10pct,Ponrang,56.2365,7183.853862,0.782818,0.501368
+lereng_plus_10pct,Ponrang Selatan,0.0,5952.778647,0.0,0.0
+lereng_plus_10pct,Suli,25.812279,5559.759703,0.46427,0.300189
+lereng_plus_10pct,Suli Barat,34.354924,12737.236841,0.26972,0.186387
+lereng_plus_10pct,Walenrang,39.293387,5178.986334,0.758708,0.505004
+lereng_plus_10pct,Walenrang Barat,104.210865,11310.910886,0.92133,0.388308
+lereng_plus_10pct,Walenrang Timur,0.958409,3898.573242,0.024584,0.016145
+lereng_plus_10pct,Walenrang Utara,379.510545,14475.795428,2.62169,1.596543
+lereng_plus_10pct,SELURUH KABUPATEN,1941.327162,171418.207963,1.132509,0.669787
+jalan_minus_10pct,Bajo,48.036142,4206.448058,1.141964,0.868572
+jalan_minus_10pct,Bajo Barat,152.226425,6558.331026,2.321115,1.502239
+jalan_minus_10pct,Bassesangtempe,300.808481,13525.624073,2.22399,1.083763
+jalan_minus_10pct,Bassesangtempe Utara,47.767272,7890.560387,0.605372,0.336112
+jalan_minus_10pct,Belopa,39.630077,1932.458847,2.050759,1.234622
+jalan_minus_10pct,Belopa Utara,0.0,1629.003614,0.0,0.0
+jalan_minus_10pct,Bua,350.63982,11608.875287,3.020446,2.019811
+jalan_minus_10pct,Bupon,303.732203,9647.802567,3.148201,2.124614
+jalan_minus_10pct,Kamanre,140.77013,4120.053844,3.416706,2.436322
+jalan_minus_10pct,Lamasi,457.506164,3128.723884,14.622772,10.508392
+jalan_minus_10pct,Lamasi Timur,365.372166,3418.219709,10.688961,5.719574
+jalan_minus_10pct,Larompong,224.609185,16740.970249,1.341674,0.984572
+jalan_minus_10pct,Larompong Selatan,79.258973,8257.071138,0.959892,0.707797
+jalan_minus_10pct,Latimojong,59.801134,12456.170339,0.480092,0.184932
+jalan_minus_10pct,Ponrang,56.2365,7183.853862,0.782818,0.501368
+jalan_minus_10pct,Ponrang Selatan,26.683102,5952.778647,0.448246,0.301731
+jalan_minus_10pct,Suli,246.180433,5559.759703,4.427897,2.863
+jalan_minus_10pct,Suli Barat,60.124978,12737.236841,0.472041,0.326198
+jalan_minus_10pct,Walenrang,62.367212,5178.986334,1.204236,0.801552
+jalan_minus_10pct,Walenrang Barat,110.439069,11310.910886,0.976394,0.411515
+jalan_minus_10pct,Walenrang Timur,229.700591,3898.573242,5.891914,3.869448
+jalan_minus_10pct,Walenrang Utara,499.714966,14475.795428,3.452073,2.102225
+jalan_minus_10pct,SELURUH KABUPATEN,3861.605025,171418.207963,2.252739,1.332311
+jalan_plus_10pct,Bajo,327.956463,4206.448058,7.796518,5.92999
+jalan_plus_10pct,Bajo Barat,237.708909,6558.331026,3.624534,2.345818
+jalan_plus_10pct,Bassesangtempe,215.13157,13525.624073,1.590548,0.775083
+jalan_plus_10pct,Bassesangtempe Utara,94.794659,7890.560387,1.201368,0.667018
+jalan_plus_10pct,Belopa,83.601119,1932.458847,4.326153,2.604481
+jalan_plus_10pct,Belopa Utara,440.705647,1629.003614,27.053694,14.392116
+jalan_plus_10pct,Bua,144.085369,11608.875287,1.241166,0.829983
+jalan_plus_10pct,Bupon,336.384381,9647.802567,3.486642,2.353017
+jalan_plus_10pct,Kamanre,346.476156,4120.053844,8.409506,5.996497
+jalan_plus_10pct,Lamasi,828.740088,3128.723884,26.488118,19.03521
+jalan_plus_10pct,Lamasi Timur,842.247365,3418.219709,24.639942,13.184627
+jalan_plus_10pct,Larompong,154.108873,16740.970249,0.920549,0.675534
+jalan_plus_10pct,Larompong Selatan,92.911976,8257.071138,1.125241,0.829721
+jalan_plus_10pct,Latimojong,28.652808,12456.170339,0.230029,0.088607
+jalan_plus_10pct,Ponrang,880.514904,7183.853862,12.25686,7.850095
+jalan_plus_10pct,Ponrang Selatan,811.225983,5952.778647,13.627686,9.173286
+jalan_plus_10pct,Suli,472.25779,5559.759703,8.494212,5.492207
+jalan_plus_10pct,Suli Barat,36.137734,12737.236841,0.283717,0.196059
+jalan_plus_10pct,Walenrang,277.954495,5178.986334,5.366967,3.572308
+jalan_plus_10pct,Walenrang Barat,41.80859,11310.910886,0.369631,0.155786
+jalan_plus_10pct,Walenrang Timur,857.447207,3898.573242,21.993872,14.444226
+jalan_plus_10pct,Walenrang Utara,279.659846,14475.795428,1.931913,1.176486
+jalan_plus_10pct,SELURUH KABUPATEN,7830.511929,171418.207963,4.568075,2.701643
+pusat_minus_10pct,Bajo,332.43237,4206.448058,7.902923,6.010922
+pusat_minus_10pct,Bajo Barat,69.334466,6558.331026,1.057197,0.684224
+pusat_minus_10pct,Bassesangtempe,10.931244,13525.624073,0.080819,0.039383
+pusat_minus_10pct,Bassesangtempe Utara,6.707541,7890.560387,0.085007,0.047197
+pusat_minus_10pct,Belopa,71.53108,1932.458847,3.701558,2.228455
+pusat_minus_10pct,Belopa Utara,440.705647,1629.003614,27.053694,14.392116
+pusat_minus_10pct,Bua,50.319849,11608.875287,0.43346,0.28986
+pusat_minus_10pct,Bupon,106.395325,9647.802567,1.102793,0.744238
+pusat_minus_10pct,Kamanre,237.978266,4120.053844,5.776096,4.118713
+pusat_minus_10pct,Lamasi,356.704983,3128.723884,11.400974,8.193105
+pusat_minus_10pct,Lamasi Timur,297.149798,3418.219709,8.693116,4.651614
+pusat_minus_10pct,Larompong,54.044692,16740.970249,0.322829,0.236904
+pusat_minus_10pct,Larompong Selatan,90.994448,8257.071138,1.102018,0.812597
+pusat_minus_10pct,Latimojong,27.181353,12456.170339,0.218216,0.084057
+pusat_minus_10pct,Ponrang,880.514904,7183.853862,12.25686,7.850095
+pusat_minus_10pct,Ponrang Selatan,811.225983,5952.778647,13.627686,9.173286
+pusat_minus_10pct,Suli,343.1084,5559.759703,6.171281,3.990241
+pusat_minus_10pct,Suli Barat,25.405139,12737.236841,0.199456,0.137831
+pusat_minus_10pct,Walenrang,162.282135,5178.986334,3.133473,2.085672
+pusat_minus_10pct,Walenrang Barat,25.479767,11310.910886,0.225267,0.094942
+pusat_minus_10pct,Walenrang Timur,455.770665,3898.573242,11.690704,7.677738
+pusat_minus_10pct,Walenrang Utara,13.439042,14475.795428,0.092838,0.056536
+pusat_minus_10pct,SELURUH KABUPATEN,4869.637097,171418.207963,2.840793,1.680097
+pusat_plus_10pct,Bajo,0.0,4206.448058,0.0,0.0
+pusat_plus_10pct,Bajo Barat,0.0,6558.331026,0.0,0.0
+pusat_plus_10pct,Bassesangtempe,0.0,13525.624073,0.0,0.0
+pusat_plus_10pct,Bassesangtempe Utara,0.3194,7890.560387,0.004048,0.002247
+pusat_plus_10pct,Belopa,0.0,1932.458847,0.0,0.0
+pusat_plus_10pct,Belopa Utara,0.0,1629.003614,0.0,0.0
+pusat_plus_10pct,Bua,0.0,11608.875287,0.0,0.0
+pusat_plus_10pct,Bupon,0.0,9647.802567,0.0,0.0
+pusat_plus_10pct,Kamanre,0.0,4120.053844,0.0,0.0
+pusat_plus_10pct,Lamasi,0.0,3128.723884,0.0,0.0
+pusat_plus_10pct,Lamasi Timur,0.0,3418.219709,0.0,0.0
+pusat_plus_10pct,Larompong,0.0,16740.970249,0.0,0.0
+pusat_plus_10pct,Larompong Selatan,0.0,8257.071138,0.0,0.0
+pusat_plus_10pct,Latimojong,0.0,12456.170339,0.0,0.0
+pusat_plus_10pct,Ponrang,0.0,7183.853862,0.0,0.0
+pusat_plus_10pct,Ponrang Selatan,0.0,5952.778647,0.0,0.0
+pusat_plus_10pct,Suli,0.0,5559.759703,0.0,0.0
+pusat_plus_10pct,Suli Barat,0.0,12737.236841,0.0,0.0
+pusat_plus_10pct,Walenrang,0.0,5178.986334,0.0,0.0
+pusat_plus_10pct,Walenrang Barat,2.843026,11310.910886,0.025135,0.010594
+pusat_plus_10pct,Walenrang Timur,0.0,3898.573242,0.0,0.0
+pusat_plus_10pct,Walenrang Utara,0.0,14475.795428,0.0,0.0
+pusat_plus_10pct,SELURUH KABUPATEN,3.162426,171418.207963,0.001845,0.001091
+elevasi_minus_10pct,Bajo,332.43237,4206.448058,7.902923,6.010922
+elevasi_minus_10pct,Bajo Barat,82.904486,6558.331026,1.26411,0.818139
+elevasi_minus_10pct,Bassesangtempe,211.937445,13525.624073,1.566933,0.763576
+elevasi_minus_10pct,Bassesangtempe Utara,77.865338,7890.560387,0.986816,0.547896
+elevasi_minus_10pct,Belopa,71.53108,1932.458847,3.701558,2.228455
+elevasi_minus_10pct,Belopa Utara,440.705647,1629.003614,27.053694,14.392116
+elevasi_minus_10pct,Bua,181.944861,11608.875287,1.567291,1.048068
+elevasi_minus_10pct,Bupon,223.278345,9647.802567,2.314292,1.561837
+elevasi_minus_10pct,Kamanre,237.978266,4120.053844,5.776096,4.118713
+elevasi_minus_10pct,Lamasi,356.864716,3128.723884,11.406079,8.196774
+elevasi_minus_10pct,Lamasi Timur,297.309558,3418.219709,8.69779,4.654115
+elevasi_minus_10pct,Larompong,138.770849,16740.970249,0.82893,0.6083
+elevasi_minus_10pct,Larompong Selatan,92.911976,8257.071138,1.125241,0.829721
+elevasi_minus_10pct,Latimojong,28.652808,12456.170339,0.230029,0.088607
+elevasi_minus_10pct,Ponrang,880.514904,7183.853862,12.25686,7.850095
+elevasi_minus_10pct,Ponrang Selatan,811.225983,5952.778647,13.627686,9.173286
+elevasi_minus_10pct,Suli,344.303543,5559.759703,6.192777,4.00414
+elevasi_minus_10pct,Suli Barat,20.532205,12737.236841,0.161198,0.111394
+elevasi_minus_10pct,Walenrang,180.681576,5178.986334,3.488744,2.322144
+elevasi_minus_10pct,Walenrang Barat,39.284918,11310.910886,0.347319,0.146382
+elevasi_minus_10pct,Walenrang Timur,455.770665,3898.573242,11.690704,7.677738
+elevasi_minus_10pct,Walenrang Utara,277.264066,14475.795428,1.915363,1.166408
+elevasi_minus_10pct,SELURUH KABUPATEN,5784.665603,171418.207963,3.374592,1.995796
+elevasi_plus_10pct,Bajo,0.0,4206.448058,0.0,0.0
+elevasi_plus_10pct,Bajo Barat,46.4383,6558.331026,0.708081,0.458274
+elevasi_plus_10pct,Bassesangtempe,279.336382,13525.624073,2.065238,1.006403
+elevasi_plus_10pct,Bassesangtempe Utara,46.010481,7890.560387,0.583108,0.32375
+elevasi_plus_10pct,Belopa,0.0,1932.458847,0.0,0.0
+elevasi_plus_10pct,Belopa Utara,0.0,1629.003614,0.0,0.0
+elevasi_plus_10pct,Bua,186.098,11608.875287,1.603067,1.071991
+elevasi_plus_10pct,Bupon,188.652581,9647.802567,1.955394,1.319629
+elevasi_plus_10pct,Kamanre,0.0,4120.053844,0.0,0.0
+elevasi_plus_10pct,Lamasi,0.0,3128.723884,0.0,0.0
+elevasi_plus_10pct,Lamasi Timur,0.0,3418.219709,0.0,0.0
+elevasi_plus_10pct,Larompong,189.339902,16740.970249,1.130997,0.829969
+elevasi_plus_10pct,Larompong Selatan,11.185583,8257.071138,0.135467,0.099889
+elevasi_plus_10pct,Latimojong,32.483258,12456.170339,0.26078,0.100453
+elevasi_plus_10pct,Ponrang,0.0,7183.853862,0.0,0.0
+elevasi_plus_10pct,Ponrang Selatan,0.0,5952.778647,0.0,0.0
+elevasi_plus_10pct,Suli,5.432306,5559.759703,0.097708,0.063176
+elevasi_plus_10pct,Suli Barat,25.724084,12737.236841,0.20196,0.139562
+elevasi_plus_10pct,Walenrang,10.062269,5178.986334,0.19429,0.129322
+elevasi_plus_10pct,Walenrang Barat,79.689256,11310.910886,0.704534,0.296936
+elevasi_plus_10pct,Walenrang Timur,0.958409,3898.573242,0.024584,0.016145
+elevasi_plus_10pct,Walenrang Utara,356.327795,14475.795428,2.461542,1.499017
+elevasi_plus_10pct,SELURUH KABUPATEN,1457.738605,171418.207963,0.850399,0.502942
+sungai_minus_10pct,Bajo,0.0,4206.448058,0.0,0.0
+sungai_minus_10pct,Bajo Barat,0.0,6558.331026,0.0,0.0
+sungai_minus_10pct,Bassesangtempe,0.0,13525.624073,0.0,0.0
+sungai_minus_10pct,Bassesangtempe Utara,0.0,7890.560387,0.0,0.0
+sungai_minus_10pct,Belopa,0.0,1932.458847,0.0,0.0
+sungai_minus_10pct,Belopa Utara,0.0,1629.003614,0.0,0.0
+sungai_minus_10pct,Bua,0.0,11608.875287,0.0,0.0
+sungai_minus_10pct,Bupon,0.0,9647.802567,0.0,0.0
+sungai_minus_10pct,Kamanre,0.0,4120.053844,0.0,0.0
+sungai_minus_10pct,Lamasi,0.0,3128.723884,0.0,0.0
+sungai_minus_10pct,Lamasi Timur,0.0,3418.219709,0.0,0.0
+sungai_minus_10pct,Larompong,0.0,16740.970249,0.0,0.0
+sungai_minus_10pct,Larompong Selatan,0.0,8257.071138,0.0,0.0
+sungai_minus_10pct,Latimojong,0.0,12456.170339,0.0,0.0
+sungai_minus_10pct,Ponrang,0.0,7183.853862,0.0,0.0
+sungai_minus_10pct,Ponrang Selatan,0.0,5952.778647,0.0,0.0
+sungai_minus_10pct,Suli,0.0,5559.759703,0.0,0.0
+sungai_minus_10pct,Suli Barat,0.0,12737.236841,0.0,0.0
+sungai_minus_10pct,Walenrang,0.0,5178.986334,0.0,0.0
+sungai_minus_10pct,Walenrang Barat,0.0,11310.910886,0.0,0.0
+sungai_minus_10pct,Walenrang Timur,0.0,3898.573242,0.0,0.0
+sungai_minus_10pct,Walenrang Utara,0.0,14475.795428,0.0,0.0
+sungai_minus_10pct,SELURUH KABUPATEN,0.0,171418.207963,0.0,0.0
+sungai_plus_10pct,Bajo,0.0,4206.448058,0.0,0.0
+sungai_plus_10pct,Bajo Barat,0.0,6558.331026,0.0,0.0
+sungai_plus_10pct,Bassesangtempe,0.0,13525.624073,0.0,0.0
+sungai_plus_10pct,Bassesangtempe Utara,0.0,7890.560387,0.0,0.0
+sungai_plus_10pct,Belopa,0.0,1932.458847,0.0,0.0
+sungai_plus_10pct,Belopa Utara,0.0,1629.003614,0.0,0.0
+sungai_plus_10pct,Bua,0.0,11608.875287,0.0,0.0
+sungai_plus_10pct,Bupon,0.0,9647.802567,0.0,0.0
+sungai_plus_10pct,Kamanre,0.0,4120.053844,0.0,0.0
+sungai_plus_10pct,Lamasi,0.0,3128.723884,0.0,0.0
+sungai_plus_10pct,Lamasi Timur,0.0,3418.219709,0.0,0.0
+sungai_plus_10pct,Larompong,0.0,16740.970249,0.0,0.0
+sungai_plus_10pct,Larompong Selatan,0.0,8257.071138,0.0,0.0
+sungai_plus_10pct,Latimojong,0.0,12456.170339,0.0,0.0
+sungai_plus_10pct,Ponrang,0.0,7183.853862,0.0,0.0
+sungai_plus_10pct,Ponrang Selatan,0.0,5952.778647,0.0,0.0
+sungai_plus_10pct,Suli,0.0,5559.759703,0.0,0.0
+sungai_plus_10pct,Suli Barat,0.0,12737.236841,0.0,0.0
+sungai_plus_10pct,Walenrang,0.0,5178.986334,0.0,0.0
+sungai_plus_10pct,Walenrang Barat,0.0,11310.910886,0.0,0.0
+sungai_plus_10pct,Walenrang Timur,0.0,3898.573242,0.0,0.0
+sungai_plus_10pct,Walenrang Utara,0.0,14475.795428,0.0,0.0
+sungai_plus_10pct,SELURUH KABUPATEN,0.0,171418.207963,0.0,0.0
+batas_minus_satu_interval,Bajo,3136.00679,4206.448058,74.552372,56.70414
+batas_minus_satu_interval,Bajo Barat,6334.192126,6558.331026,96.582379,62.508656
+batas_minus_satu_interval,Bassesangtempe,13458.716413,13525.624073,99.505327,48.489531
+batas_minus_satu_interval,Bassesangtempe Utara,7744.265967,7890.560387,98.145957,54.492136
+batas_minus_satu_interval,Belopa,966.894611,1932.458847,50.034422,30.122308
+batas_minus_satu_interval,Belopa Utara,530.583547,1629.003614,32.571048,17.327257
+batas_minus_satu_interval,Bua,9753.050075,11608.875287,84.013738,56.18106
+batas_minus_satu_interval,Bupon,7645.257817,9647.802567,79.243514,53.478758
+batas_minus_satu_interval,Kamanre,2456.688575,4120.053844,59.627584,42.518149
+batas_minus_satu_interval,Lamasi,2300.143524,3128.723884,73.516987,52.831661
+batas_minus_satu_interval,Lamasi Timur,2576.131943,3418.219709,75.364727,40.327036
+batas_minus_satu_interval,Larompong,16330.264644,16740.970249,97.546704,71.583518
+batas_minus_satu_interval,Larompong Selatan,7694.039884,8257.071138,93.181223,68.709201
+batas_minus_satu_interval,Latimojong,12456.170316,12456.170339,100.0,38.520096
+batas_minus_satu_interval,Ponrang,5113.1836,7183.853862,71.176053,45.585799
+batas_minus_satu_interval,Ponrang Selatan,3821.460583,5952.778647,64.196249,43.212806
+batas_minus_satu_interval,Suli,4126.332151,5559.759703,74.217815,47.987925
+batas_minus_satu_interval,Suli Barat,12689.041144,12737.236841,99.621616,68.842205
+batas_minus_satu_interval,Walenrang,4229.246162,5178.986334,81.661659,54.354838
+batas_minus_satu_interval,Walenrang Barat,11220.035188,11310.910886,99.196566,41.807773
+batas_minus_satu_interval,Walenrang Timur,3041.126036,3898.573242,78.006128,51.229642
+batas_minus_satu_interval,Walenrang Utara,13455.892851,14475.795428,92.954428,56.606897
+batas_minus_satu_interval,SELURUH KABUPATEN,151078.723948,171418.207963,88.134584,52.124407
+batas_plus_satu_interval,Bajo,4206.44806,4206.448058,100.0,76.059472
+batas_plus_satu_interval,Bajo Barat,6558.331015,6558.331026,100.0,64.720559
+batas_plus_satu_interval,Bassesangtempe,13525.624042,13525.624073,100.0,48.730588
+batas_plus_satu_interval,Bassesangtempe Utara,7890.560387,7890.560387,100.0,55.521529
+batas_plus_satu_interval,Belopa,1932.458856,1932.458847,100.0,60.20317
+batas_plus_satu_interval,Belopa Utara,1629.003614,1629.003614,100.0,53.198342
+batas_plus_satu_interval,Bua,11607.916794,11608.875287,99.991743,66.865756
+batas_plus_satu_interval,Bupon,9640.294166,9647.802567,99.922175,67.434084
+batas_plus_satu_interval,Kamanre,4119.254926,4120.053844,99.980609,71.292348
+batas_plus_satu_interval,Lamasi,3128.723879,3128.723884,100.0,71.863202
+batas_plus_satu_interval,Lamasi Timur,3418.219549,3418.219709,99.999995,53.509162
+batas_plus_satu_interval,Larompong,16740.970268,16740.970249,100.0,73.383842
+batas_plus_satu_interval,Larompong Selatan,8257.071141,8257.071138,100.0,73.737174
+batas_plus_satu_interval,Latimojong,12456.170316,12456.170339,100.0,38.520096
+batas_plus_satu_interval,Ponrang,7183.853863,7183.853862,100.0,64.04654
+batas_plus_satu_interval,Ponrang Selatan,5952.778732,5952.778647,100.000001,67.3136
+batas_plus_satu_interval,Suli,5559.759765,5559.759703,100.000001,64.658231
+batas_plus_satu_interval,Suli Barat,12737.236838,12737.236841,100.0,69.103682
+batas_plus_satu_interval,Walenrang,5178.986336,5178.986334,100.0,66.561026
+batas_plus_satu_interval,Walenrang Barat,11310.910871,11310.910886,100.0,42.146392
+batas_plus_satu_interval,Walenrang Timur,3898.573243,3898.573242,100.0,65.673868
+batas_plus_satu_interval,Walenrang Utara,14475.795394,14475.795428,100.0,60.897472
+batas_plus_satu_interval,SELURUH KABUPATEN,171408.942056,171418.207963,99.994595,59.138634

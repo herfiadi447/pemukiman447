@@ -1,0 +1,19 @@
+# Abaikan paket rilis besar > 50 MB
+downloads/hasil_revisi_terbaru.zip
+downloads/*.tar.gz
+
+# Berkas sementara & OS
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.temp
+*.bak
+
+# Python cache jika dijalankan
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+env/

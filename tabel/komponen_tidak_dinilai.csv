@@ -1,0 +1,155 @@
+﻿kecamatan,kode_kecamatan,komponen,luas_ha,persen_kecamatan,persen_kabupaten
+Bajo,ID7317040,worldcover_50_bangunan,166.716363,3.014505,0.05752
+Bajo,ID7317040,worldcover_80_air,2.316521,0.041886,0.000799
+Bajo,ID7317040,worldcover_90_rawa,0.0,0.0,0.0
+Bajo,ID7317040,worldcover_95_mangrove,0.0,0.0,0.0
+Bajo,ID7317040,sel_tersentuh_bangunan_selain_worldcover_50_80_90_95,444.430703,8.036035,0.153335
+Bajo,ID7317040,nodata_sumber,0.0,0.0,0.0
+Bajo,ID7317040,tepi_di_luar_grid,0.0,0.0,0.0
+Bajo Barat,ID7317041,worldcover_50_bangunan,83.420653,0.823233,0.028781
+Bajo Barat,ID7317041,worldcover_80_air,2.476533,0.02444,0.000854
+Bajo Barat,ID7317041,worldcover_90_rawa,0.0,0.0,0.0
+Bajo Barat,ID7317041,worldcover_95_mangrove,0.0,0.0,0.0
+Bajo Barat,ID7317041,sel_tersentuh_bangunan_selain_worldcover_50_80_90_95,406.062245,4.007205,0.140098
+Bajo Barat,ID7317041,nodata_sumber,0.0,0.0,0.0
+Bajo Barat,ID7317041,tepi_di_luar_grid,0.0,0.0,0.0
+Bassesangtempe,ID7317050,worldcover_50_bangunan,7.18662,0.025892,0.002479
+Bassesangtempe,ID7317050,worldcover_80_air,17.764476,0.064002,0.006129
+Bassesangtempe,ID7317050,worldcover_90_rawa,0.0,0.0,0.0
+Bassesangtempe,ID7317050,worldcover_95_mangrove,0.0,0.0,0.0
+Bassesangtempe,ID7317050,sel_tersentuh_bangunan_selain_worldcover_50_80_90_95,374.28215,1.348477,0.129133
+Bassesangtempe,ID7317050,nodata_sumber,0.0,0.0,0.0
+Bassesangtempe,ID7317050,tepi_di_luar_grid,11.530225,0.041541,0.003978
+Bassesangtempe Utara,ID7317052,worldcover_50_bangunan,7.505975,0.052815,0.00259
+Bassesangtempe Utara,ID7317052,worldcover_80_air,0.479084,0.003371,0.000165
+Bassesangtempe Utara,ID7317052,worldcover_90_rawa,0.0,0.0,0.0
+Bassesangtempe Utara,ID7317052,worldcover_95_mangrove,0.0,0.0,0.0
+Bassesangtempe Utara,ID7317052,sel_tersentuh_bangunan_selain_worldcover_50_80_90_95,547.768288,3.854344,0.188988
+Bassesangtempe Utara,ID7317052,nodata_sumber,0.0,0.0,0.0
+Bassesangtempe Utara,ID7317052,tepi_di_luar_grid,17.486472,0.123043,0.006033
+Belopa,ID7317030,worldcover_50_bangunan,237.169005,7.388683,0.081827
+Belopa,ID7317030,worldcover_80_air,286.944935,8.939386,0.099
+Belopa,ID7317030,worldcover_90_rawa,2.077356,0.064717,0.000717
+Belopa,ID7317030,worldcover_95_mangrove,243.155232,7.575176,0.083892
+Belopa,ID7317030,sel_tersentuh_bangunan_selain_worldcover_50_80_90_95,318.547457,9.92392,0.109904
+Belopa,ID7317030,nodata_sumber,0.0,0.0,0.0
+Belopa,ID7317030,tepi_di_luar_grid,3.49755,0.108961,0.001207
+Belopa Utara,ID7317032,worldcover_50_bangunan,203.509411,6.646003,0.070214
+Belopa Utara,ID7317032,worldcover_80_air,685.746758,22.394419,0.236593
+Belopa Utara,ID7317032,worldcover_90_rawa,41.770275,1.364091,0.014411
+Belopa Utara,ID7317032,worldcover_95_mangrove,219.457879,7.166832,0.075716
+Belopa Utara,ID7317032,sel_tersentuh_bangunan_selain_worldcover_50_80_90_95,250.761037,8.189099,0.086516
+Belopa Utara,ID7317032,nodata_sumber,0.0,0.0,0.0
+Belopa Utara,ID7317032,tepi_di_luar_grid,3.352939,0.109497,0.001157
+Bua,ID7317070,worldcover_50_bangunan,320.042533,1.84356,0.110419
+Bua,ID7317070,worldcover_80_air,495.93114,2.856741,0.171104
+Bua,ID7317070,worldcover_90_rawa,15.353476,0.088442,0.005297
+Bua,ID7317070,worldcover_95_mangrove,342.429678,1.972518,0.118143
+Bua,ID7317070,sel_tersentuh_bangunan_selain_worldcover_50_80_90_95,831.093176,4.787394,0.28674
+Bua,ID7317070,nodata_sumber,0.0,0.0,0.0
+Bua,ID7317070,tepi_di_luar_grid,15.088931,0.086918,0.005206
+Bupon,ID7317060,worldcover_50_bangunan,131.789046,0.921867,0.045469
+Bupon,ID7317060,worldcover_80_air,23.617643,0.165206,0.008148
+Bupon,ID7317060,worldcover_90_rawa,0.0,0.0,0.0
+Bupon,ID7317060,worldcover_95_mangrove,0.0,0.0,0.0
+Bupon,ID7317060,sel_tersentuh_bangunan_selain_worldcover_50_80_90_95,603.09657,4.218675,0.208077
+Bupon,ID7317060,nodata_sumber,0.0,0.0,0.0
+Bupon,ID7317060,tepi_di_luar_grid,0.0,0.0,0.0
+Kamanre,ID7317031,worldcover_50_bangunan,135.969327,2.353234,0.046911
+Kamanre,ID7317031,worldcover_80_air,730.275864,12.638956,0.251956
+Kamanre,ID7317031,worldcover_90_rawa,13.35842,0.231195,0.004609
+Kamanre,ID7317031,worldcover_95_mangrove,264.604823,4.579542,0.091293
+Kamanre,ID7317031,sel_tersentuh_bangunan_selain_worldcover_50_80_90_95,292.679973,5.065441,0.100979
+Kamanre,ID7317031,nodata_sumber,0.0,0.0,0.0
+Kamanre,ID7317031,tepi_di_luar_grid,2.570385,0.044486,0.000887
+Lamasi,ID7317090,worldcover_50_bangunan,221.260314,5.082096,0.076338
+Lamasi,ID7317090,worldcover_80_air,16.290924,0.374184,0.005621
+Lamasi,ID7317090,worldcover_90_rawa,0.159736,0.003669,5.5e-05
+Lamasi,ID7317090,worldcover_95_mangrove,0.0,0.0,0.0
+Lamasi,ID7317090,sel_tersentuh_bangunan_selain_worldcover_50_80_90_95,522.45382,12.000165,0.180254
+Lamasi,ID7317090,nodata_sumber,0.0,0.0,0.0
+Lamasi,ID7317090,tepi_di_luar_grid,4.814359,0.11058,0.001661
+Lamasi Timur,ID7317093,worldcover_50_bangunan,94.873825,1.485165,0.032733
+Lamasi Timur,ID7317093,worldcover_80_air,851.362882,13.327323,0.293733
+Lamasi Timur,ID7317093,worldcover_90_rawa,205.611997,3.218671,0.070939
+Lamasi Timur,ID7317093,worldcover_95_mangrove,757.550258,11.85877,0.261366
+Lamasi Timur,ID7317093,sel_tersentuh_bangunan_selain_worldcover_50_80_90_95,452.866779,7.089223,0.156246
+Lamasi Timur,ID7317093,nodata_sumber,0.0,0.0,0.0
+Lamasi Timur,ID7317093,tepi_di_luar_grid,12.523592,0.196046,0.004321
+Larompong,ID7317010,worldcover_50_bangunan,170.492139,0.74735,0.058822
+Larompong,ID7317010,worldcover_80_air,350.694246,1.537264,0.120995
+Larompong,ID7317010,worldcover_90_rawa,7.829846,0.034322,0.002701
+Larompong,ID7317010,worldcover_95_mangrove,292.114785,1.280482,0.100784
+Larompong,ID7317010,sel_tersentuh_bangunan_selain_worldcover_50_80_90_95,1205.393432,5.283828,0.415879
+Larompong,ID7317010,nodata_sumber,0.0,0.0,0.0
+Larompong,ID7317010,tepi_di_luar_grid,14.379152,0.063031,0.004961
+Larompong Selatan,ID7317011,worldcover_50_bangunan,122.732777,1.096026,0.042345
+Larompong Selatan,ID7317011,worldcover_80_air,612.853892,5.472899,0.211444
+Larompong Selatan,ID7317011,worldcover_90_rawa,27.325105,0.244018,0.009428
+Larompong Selatan,ID7317011,worldcover_95_mangrove,154.084449,1.376003,0.053161
+Larompong Selatan,ID7317011,sel_tersentuh_bangunan_selain_worldcover_50_80_90_95,695.453556,6.210529,0.239942
+Larompong Selatan,ID7317011,nodata_sumber,0.0,0.0,0.0
+Larompong Selatan,ID7317011,tepi_di_luar_grid,16.81946,0.150201,0.005803
+Latimojong,ID7317051,worldcover_50_bangunan,13.896534,0.042974,0.004795
+Latimojong,ID7317051,worldcover_80_air,3.897346,0.012052,0.001345
+Latimojong,ID7317051,worldcover_90_rawa,0.0,0.0,0.0
+Latimojong,ID7317051,worldcover_95_mangrove,0.0,0.0,0.0
+Latimojong,ID7317051,sel_tersentuh_bangunan_selain_worldcover_50_80_90_95,389.752745,1.205291,0.13447
+Latimojong,ID7317051,nodata_sumber,0.0,0.0,0.0
+Latimojong,ID7317051,tepi_di_luar_grid,17.992399,0.055641,0.006208
+Ponrang,ID7317061,worldcover_50_bangunan,269.932225,2.406539,0.093131
+Ponrang,ID7317061,worldcover_80_air,1874.273727,16.709798,0.646652
+Ponrang,ID7317061,worldcover_90_rawa,125.06867,1.11503,0.043151
+Ponrang,ID7317061,worldcover_95_mangrove,42.650933,0.380248,0.014715
+Ponrang,ID7317061,sel_tersentuh_bangunan_selain_worldcover_50_80_90_95,487.045247,4.342177,0.168038
+Ponrang,ID7317061,nodata_sumber,0.0,0.0,0.0
+Ponrang,ID7317061,tepi_di_luar_grid,6.341153,0.056534,0.002188
+Ponrang Selatan,ID7317062,worldcover_50_bangunan,255.323825,2.887184,0.088091
+Ponrang Selatan,ID7317062,worldcover_80_air,1620.995985,18.330108,0.559268
+Ponrang Selatan,ID7317062,worldcover_90_rawa,34.19527,0.386678,0.011798
+Ponrang Selatan,ID7317062,worldcover_95_mangrove,429.368894,4.855273,0.148139
+Ponrang Selatan,ID7317062,sel_tersentuh_bangunan_selain_worldcover_50_80_90_95,438.633691,4.960039,0.151335
+Ponrang Selatan,ID7317062,nodata_sumber,0.0,0.0,0.0
+Ponrang Selatan,ID7317062,tepi_di_luar_grid,8.881226,0.100428,0.003064
+Suli,ID7317020,worldcover_50_bangunan,172.211162,2.002761,0.059415
+Suli,ID7317020,worldcover_80_air,660.377024,7.679974,0.22784
+Suli,ID7317020,worldcover_90_rawa,12.463803,0.14495,0.0043
+Suli,ID7317020,worldcover_95_mangrove,437.750986,5.090904,0.151031
+Suli,ID7317020,sel_tersentuh_bangunan_selain_worldcover_50_80_90_95,578.915528,6.732603,0.199734
+Suli,ID7317020,nodata_sumber,0.0,0.0,0.0
+Suli,ID7317020,tepi_di_luar_grid,5.597589,0.065098,0.001931
+Suli Barat,ID7317021,worldcover_50_bangunan,58.477046,0.317257,0.020175
+Suli Barat,ID7317021,worldcover_80_air,0.015309,8.3e-05,5e-06
+Suli Barat,ID7317021,worldcover_90_rawa,0.0,0.0,0.0
+Suli Barat,ID7317021,worldcover_95_mangrove,0.0,0.0,0.0
+Suli Barat,ID7317021,sel_tersentuh_bangunan_selain_worldcover_50_80_90_95,649.432606,3.523385,0.224064
+Suli Barat,ID7317021,nodata_sumber,0.0,0.0,0.0
+Suli Barat,ID7317021,tepi_di_luar_grid,0.566186,0.003072,0.000195
+Walenrang,ID7317080,worldcover_50_bangunan,186.523247,2.397222,0.064353
+Walenrang,ID7317080,worldcover_80_air,16.538449,0.212554,0.005706
+Walenrang,ID7317080,worldcover_90_rawa,0.159735,0.002053,5.5e-05
+Walenrang,ID7317080,worldcover_95_mangrove,0.0,0.0,0.0
+Walenrang,ID7317080,sel_tersentuh_bangunan_selain_worldcover_50_80_90_95,518.947654,6.669585,0.179045
+Walenrang,ID7317080,nodata_sumber,0.0,0.0,0.0
+Walenrang,ID7317080,tepi_di_luar_grid,10.180811,0.130845,0.003513
+Walenrang Barat,ID7317092,worldcover_50_bangunan,7.346173,0.027373,0.002535
+Walenrang Barat,ID7317092,worldcover_80_air,6.454865,0.024052,0.002227
+Walenrang Barat,ID7317092,worldcover_90_rawa,0.0,0.0,0.0
+Walenrang Barat,ID7317092,worldcover_95_mangrove,0.0,0.0,0.0
+Walenrang Barat,ID7317092,sel_tersentuh_bangunan_selain_worldcover_50_80_90_95,439.261949,1.636765,0.151552
+Walenrang Barat,ID7317092,nodata_sumber,0.0,0.0,0.0
+Walenrang Barat,ID7317092,tepi_di_luar_grid,21.5493,0.080296,0.007435
+Walenrang Timur,ID7317081,worldcover_50_bangunan,154.920319,2.609728,0.05345
+Walenrang Timur,ID7317081,worldcover_80_air,251.534375,4.237252,0.086783
+Walenrang Timur,ID7317081,worldcover_90_rawa,27.637621,0.465573,0.009535
+Walenrang Timur,ID7317081,worldcover_95_mangrove,569.920735,9.600666,0.196631
+Walenrang Timur,ID7317081,sel_tersentuh_bangunan_selain_worldcover_50_80_90_95,425.209722,7.16292,0.146704
+Walenrang Timur,ID7317081,nodata_sumber,0.0,0.0,0.0
+Walenrang Timur,ID7317081,tepi_di_luar_grid,10.502533,0.176922,0.003624
+Walenrang Utara,ID7317091,worldcover_50_bangunan,130.329912,0.548278,0.044966
+Walenrang Utara,ID7317091,worldcover_80_air,5.270058,0.02217,0.001818
+Walenrang Utara,ID7317091,worldcover_90_rawa,0.319463,0.001344,0.00011
+Walenrang Utara,ID7317091,worldcover_95_mangrove,0.0,0.0,0.0
+Walenrang Utara,ID7317091,sel_tersentuh_bangunan_selain_worldcover_50_80_90_95,807.404721,3.396629,0.278567
+Walenrang Utara,ID7317091,nodata_sumber,0.0,0.0,0.0
+Walenrang Utara,ID7317091,tepi_di_luar_grid,16.48692,0.069358,0.005688
